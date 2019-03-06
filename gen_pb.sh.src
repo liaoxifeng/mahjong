@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+_build/default/lib/gpb/bin/protoc-erl -I protobuf/ \
+    -o-erl apps/erlang/src/proto \
+    -o-hrl apps/erlang/include/ \
+    -il \
+    `ls protobuf/*.proto`

@@ -1,0 +1,5 @@
+[
+    {majhong, [
+        {port, ${LISTEN_PORT}}
+    ]}
+].

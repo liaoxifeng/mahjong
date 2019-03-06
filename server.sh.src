@@ -1,0 +1,47 @@
+#!/bin/bash
+
+LOCAL_HOST=127.0.0.1
+export NODE_NAME="majhong@$LOCAL_HOST"
+export SETCOOKIE=majhong
+export LISTEN_PORT=18201
+
+
+live(){
+    SYS_CONFIG="config/sys.config"
+    cp "config/sys.config.src" "$SYS_CONFIG"
+    replace_os_vars "config/sys.config.src" "$SYS_CONFIG"
+
+    VM_ARGS="config/vm.args"
+    cp "config/vm.args.src" "$VM_ARGS"
+    replace_os_vars "config/vm.args.src" "$VM_ARGS"
+
+    cp "config/robot.args.src" "config/robot.args"
+    replace_os_vars "config/robot.args.src" "config/robot.args"
+
+    ERL_FLAGS=" -args_file $VM_ARGS" rebar3 shell \
+        --config "$SYS_CONFIG" \
+        --name ${NODE_NAME} --setcookie ${SETCOOKIE} \
+        --apps ssl,ranch,cowlib,mysql,crypto,cowboy,majhong,mnesia
+}
+
+# Replace environment variables
+replace_os_vars() {
+    awk '{
+        while(match($0,"[$]{[^}]*}")) {
+            var=substr($0,RSTART+2,RLENGTH -3)
+            gsub("[$]{"var"}",ENVIRON[var])
+        }
+    }1' < "$1" > "$2"
+}
+
+error(){
+    echo "请正确输入"
+}
+
+# functions
+func=$1
+
+case "${func}" in
+	live ) live;;
+    * ) error;;
+esac

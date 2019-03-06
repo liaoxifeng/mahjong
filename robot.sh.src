@@ -1,0 +1,11 @@
+#!/bin/bash
+
+LOCAL_HOST=127.0.0.1
+SETCOOKIE=robot
+
+SNAMEPRE=robot
+NODE_NAME="${SNAMEPRE}@$LOCAL_HOST"
+
+ERL_FLAGS=" -args_file config/robot.args" rebar3 shell \
+    --name ${NODE_NAME} --setcookie ${SETCOOKIE} \
+    --apps cowboy,robot
