@@ -1,14 +1,16 @@
 %%%-------------------------------------------------------------------
-%% @doc majhong top level supervisor.
+%% @doc mahjong top level supervisor.
 %% @end
 %%%-------------------------------------------------------------------
 
--module(majhong_sup).
+-module(mahjong_sup).
+
+-include("common.hrl").
 
 -behaviour(supervisor).
 
 %% API
--export([start_link/0]).
+-export([start_link/0, start_child/1]).
 
 %% Supervisor callbacks
 -export([init/1]).
@@ -23,7 +25,15 @@
 %%====================================================================
 
 start_link() ->
-    supervisor:start_link({local, ?SERVER}, ?MODULE, []).
+    case supervisor:start_link({local, ?SERVER}, ?MODULE, []) of
+        {ok, _} = Ret ->
+            %% init something
+            do_start(),
+            Ret;
+
+        OtherRet ->
+            OtherRet
+    end.
 
 %%====================================================================
 %% Supervisor callbacks
@@ -34,11 +44,28 @@ start_link() ->
 %% Before OTP 18 tuples must be used to specify a child. e.g.
 %% Child :: {Id,StartFunc,Restart,Shutdown,Type,Modules}
 init([]) ->
-    {ok, { {one_for_all, 0, 1},
+    {ok, { {one_for_all, 5, 10},
         [
-
+            ?CHILD(mahjong_init, worker),
+            ?CHILD(room_mgr_srv, worker)
         ]} }.
 
 %%====================================================================
 %% Internal functions
 %%====================================================================
+
+%% 启动 app 各模块
+do_start() ->
+    ok = start_player_sup(),
+    ok.
+
+%% 开启用户进程监控树
+start_player_sup() ->
+    {ok,_} = supervisor:start_child(?MODULE,
+        {player_sup,
+            {player_sup, start_link,[]},
+            transient, infinity, supervisor, [player_sup]}),
+    ok.
+
+start_child(Spec) ->
+    supervisor:start_child(?MODULE, Spec).

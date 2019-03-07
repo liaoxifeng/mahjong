@@ -1,8 +1,8 @@
-{application, majhong,
+{application, mahjong,
  [{description, "An OTP application"},
   {vsn, "0.1.0"},
   {registered, []},
-  {mod, { majhong_app, []}},
+  {mod, { mahjong_app, []}},
   {applications,
    [kernel,
     stdlib

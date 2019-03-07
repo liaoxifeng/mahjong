@@ -1,9 +1,9 @@
 %%%-------------------------------------------------------------------
-%% @doc majhong public API
+%% @doc mahjong public API
 %% @end
 %%%-------------------------------------------------------------------
 
--module(majhong_app).
+-module(mahjong_app).
 
 -include("common.hrl").
 
@@ -20,19 +20,20 @@
 start(_StartType, _StartArgs) ->
     Dispatch = cowboy_router:compile([
         {'_', [
-            {"/", majhong_ws_handler, []},
+            {"/", mahjong_ws_handler, []},
 
             %% for test
-            {"/home", cowboy_static, {priv_file, majhong, "index.html"}},
-            {"/static/[...]", cowboy_static, {priv_dir, majhong, "static"}}
+            {"/home", cowboy_static, {priv_file, mahjong, "index.html"}},
+            {"/static/[...]", cowboy_static, {priv_dir, mahjong, "static"}}
         ]}
     ]),
-    {ok, Port} = application:get_env(majhong, port),
-    ?PRINT("cowboy listen ~p port", [Port]),
-    {ok, _} = cowboy:start_clear(http, [{port, Port}], #{
+    {ok, Port} = application:get_env(mahjong, port),
+    ?PRINT("cowboy listen on [~p]", [Port]),
+    {ok, _} = cowboy:start_clear(http, [{port, Port},
+        {delay_send, true}, {nodelay, true}], #{
         env => #{dispatch => Dispatch}
     }),
-    majhong_sup:start_link().
+    mahjong_sup:start_link().
 
 %%--------------------------------------------------------------------
 stop(_State) ->

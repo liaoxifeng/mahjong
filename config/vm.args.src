@@ -1,6 +1,7 @@
 ## see more detail in ERLHOME/erts-VERSION/doc/html/erl.html
 -name ${NODE_NAME}
 -setcookie ${SETCOOKIE}
+-mnesia dir '"${DBPATH}"'
 
 -env ERL_MAX_ETS_TABLES 65535
 +P 1024000

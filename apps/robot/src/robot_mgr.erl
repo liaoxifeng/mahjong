@@ -68,5 +68,5 @@ code_change(_OldVsn, State, _Extra) ->
 test() ->
     {ok, Pid} = robot:start_link(1),
 
-    Pid ! {binary, pt:encode_msg(pt_xxx,9)},
+    Pid ! {binary, pt:encode_msg(pt_common,9)},
     ok.

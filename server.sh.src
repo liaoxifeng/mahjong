@@ -1,10 +1,10 @@
 #!/bin/bash
 
 LOCAL_HOST=127.0.0.1
-export NODE_NAME="majhong@$LOCAL_HOST"
-export SETCOOKIE=majhong
+export NODE_NAME="mahjong@$LOCAL_HOST"
+export SETCOOKIE=mahjong
 export LISTEN_PORT=18201
-
+export DBPATH=$(printf 'db/Mnesia.%s/' ${NODE_NAME})
 
 live(){
     SYS_CONFIG="config/sys.config"
@@ -21,7 +21,7 @@ live(){
     ERL_FLAGS=" -args_file $VM_ARGS" rebar3 shell \
         --config "$SYS_CONFIG" \
         --name ${NODE_NAME} --setcookie ${SETCOOKIE} \
-        --apps ssl,ranch,cowlib,mysql,crypto,cowboy,majhong,mnesia
+        --apps ssl,lager,ranch,cowlib,crypto,cowboy,mahjong,mnesia
 }
 
 # Replace environment variables

@@ -24,7 +24,7 @@
     websocket_terminate/3]).
 
 start_link(Id) ->
-    websocket_client:start_link("ws://127.0.0.1:30000", ?MODULE, [Id]).
+    websocket_client:start_link("ws://127.0.0.1:18201", ?MODULE, [Id]).
 
 init([Id], _ConnState) ->
     erlang:register(get_reg_name(Id), self()),

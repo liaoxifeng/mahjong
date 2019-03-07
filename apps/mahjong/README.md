@@ -1,4 +1,4 @@
-majhong
+mahjong
 =====
 
 An OTP application

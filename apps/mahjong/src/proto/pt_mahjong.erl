@@ -115,19 +115,13 @@
 
 -type 'S2C_MahjongHistory'() :: #'S2C_MahjongHistory'{}.
 
--type 'Struct_DeviceInfo'() :: #'Struct_DeviceInfo'{}.
-
--type 'S2C_PlayerInfo1'() :: #'S2C_PlayerInfo1'{}.
-
--type 'Struct_RoomBrief'() :: #'Struct_RoomBrief'{}.
-
--type 'Struct_RoomPlayerBrief'() :: #'Struct_RoomPlayerBrief'{}.
-
 -type 'C2S_Login'() :: #'C2S_Login'{}.
 
 -type 'S2C_Login'() :: #'S2C_Login'{}.
 
 -type 'S2C_Err'() :: #'S2C_Err'{}.
+
+-type 'S2C_PlayerInfo'() :: #'S2C_PlayerInfo'{}.
 
 -type 'C2S_Heartbeat'() :: #'C2S_Heartbeat'{}.
 
@@ -137,20 +131,20 @@
 
 -type 'S2C_Gm'() :: #'S2C_Gm'{}.
 
--export_type(['C2S_MahjongPrepare'/0, 'S2C_MahjongPrepare'/0, 'C2S_MahjongCancelPrepare'/0, 'S2C_MahjongCancelPrepare'/0, 'Struct_MahjongPlayerBrief'/0, 'C2S_MahjongStart'/0, 'S2C_MahjongStart'/0, 'S2C_MahjongDraw'/0, 'C2S_MahjongDiscard'/0, 'S2C_MahjongDiscard'/0, 'C2S_MahjongPongs'/0, 'S2C_MahjongPongs'/0, 'C2S_MahjongKong'/0, 'S2C_MahjongKong'/0, 'C2S_MahjongChow'/0, 'S2C_MahjongChow'/0, 'C2S_MahjongHu'/0, 'S2C_MahjongHu'/0, 'C2S_MahjongZimo'/0, 'S2C_MahjongZimo'/0, 'C2S_MahjongChangeThree'/0, 'S2C_MahjongChangeThree'/0, 'C2S_MahjongDingQue'/0, 'Struct_MahjongDingQueBrief'/0, 'S2C_MahjongDingQue'/0, 'C2S_MahjongNextGame'/0, 'S2C_MahjongNextGame'/0, 'S2C_MahjongNoPrepare'/0, 'S2C_MahjongNoOwner'/0, 'S2C_MahjongHaveNoPrepare'/0, 'S2C_MahjongFinishChangeThree'/0, 'S2C_MahjongFinishDingQue'/0, 'S2C_MahjongNoPongs'/0, 'S2C_MahjongNoKong'/0, 'S2C_MahjongNoZimo'/0, 'S2C_MahjongNoHu'/0, 'S2C_MahjongHaveNoNextGame'/0, 'S2C_MahjongFinish'/0, 'C2S_MahjongHistory'/0, 'Struct_MahjongHistory'/0, 'S2C_MahjongHistory'/0, 'Struct_DeviceInfo'/0, 'S2C_PlayerInfo1'/0, 'Struct_RoomBrief'/0, 'Struct_RoomPlayerBrief'/0, 'C2S_Login'/0, 'S2C_Login'/0, 'S2C_Err'/0, 'C2S_Heartbeat'/0, 'S2C_Heartbeat'/0, 'C2S_Gm'/0, 'S2C_Gm'/0]).
+-export_type(['C2S_MahjongPrepare'/0, 'S2C_MahjongPrepare'/0, 'C2S_MahjongCancelPrepare'/0, 'S2C_MahjongCancelPrepare'/0, 'Struct_MahjongPlayerBrief'/0, 'C2S_MahjongStart'/0, 'S2C_MahjongStart'/0, 'S2C_MahjongDraw'/0, 'C2S_MahjongDiscard'/0, 'S2C_MahjongDiscard'/0, 'C2S_MahjongPongs'/0, 'S2C_MahjongPongs'/0, 'C2S_MahjongKong'/0, 'S2C_MahjongKong'/0, 'C2S_MahjongChow'/0, 'S2C_MahjongChow'/0, 'C2S_MahjongHu'/0, 'S2C_MahjongHu'/0, 'C2S_MahjongZimo'/0, 'S2C_MahjongZimo'/0, 'C2S_MahjongChangeThree'/0, 'S2C_MahjongChangeThree'/0, 'C2S_MahjongDingQue'/0, 'Struct_MahjongDingQueBrief'/0, 'S2C_MahjongDingQue'/0, 'C2S_MahjongNextGame'/0, 'S2C_MahjongNextGame'/0, 'S2C_MahjongNoPrepare'/0, 'S2C_MahjongNoOwner'/0, 'S2C_MahjongHaveNoPrepare'/0, 'S2C_MahjongFinishChangeThree'/0, 'S2C_MahjongFinishDingQue'/0, 'S2C_MahjongNoPongs'/0, 'S2C_MahjongNoKong'/0, 'S2C_MahjongNoZimo'/0, 'S2C_MahjongNoHu'/0, 'S2C_MahjongHaveNoNextGame'/0, 'S2C_MahjongFinish'/0, 'C2S_MahjongHistory'/0, 'Struct_MahjongHistory'/0, 'S2C_MahjongHistory'/0, 'C2S_Login'/0, 'S2C_Login'/0, 'S2C_Err'/0, 'S2C_PlayerInfo'/0, 'C2S_Heartbeat'/0, 'S2C_Heartbeat'/0, 'C2S_Gm'/0, 'S2C_Gm'/0]).
 
--spec encode_msg(#'C2S_MahjongPrepare'{} | #'S2C_MahjongPrepare'{} | #'C2S_MahjongCancelPrepare'{} | #'S2C_MahjongCancelPrepare'{} | #'Struct_MahjongPlayerBrief'{} | #'C2S_MahjongStart'{} | #'S2C_MahjongStart'{} | #'S2C_MahjongDraw'{} | #'C2S_MahjongDiscard'{} | #'S2C_MahjongDiscard'{} | #'C2S_MahjongPongs'{} | #'S2C_MahjongPongs'{} | #'C2S_MahjongKong'{} | #'S2C_MahjongKong'{} | #'C2S_MahjongChow'{} | #'S2C_MahjongChow'{} | #'C2S_MahjongHu'{} | #'S2C_MahjongHu'{} | #'C2S_MahjongZimo'{} | #'S2C_MahjongZimo'{} | #'C2S_MahjongChangeThree'{} | #'S2C_MahjongChangeThree'{} | #'C2S_MahjongDingQue'{} | #'Struct_MahjongDingQueBrief'{} | #'S2C_MahjongDingQue'{} | #'C2S_MahjongNextGame'{} | #'S2C_MahjongNextGame'{} | #'S2C_MahjongNoPrepare'{} | #'S2C_MahjongNoOwner'{} | #'S2C_MahjongHaveNoPrepare'{} | #'S2C_MahjongFinishChangeThree'{} | #'S2C_MahjongFinishDingQue'{} | #'S2C_MahjongNoPongs'{} | #'S2C_MahjongNoKong'{} | #'S2C_MahjongNoZimo'{} | #'S2C_MahjongNoHu'{} | #'S2C_MahjongHaveNoNextGame'{} | #'S2C_MahjongFinish'{} | #'C2S_MahjongHistory'{} | #'Struct_MahjongHistory'{} | #'S2C_MahjongHistory'{} | #'Struct_DeviceInfo'{} | #'S2C_PlayerInfo1'{} | #'Struct_RoomBrief'{} | #'Struct_RoomPlayerBrief'{} | #'C2S_Login'{} | #'S2C_Login'{} | #'S2C_Err'{} | #'C2S_Heartbeat'{} | #'S2C_Heartbeat'{} | #'C2S_Gm'{} | #'S2C_Gm'{}) -> binary().
+-spec encode_msg(#'C2S_MahjongPrepare'{} | #'S2C_MahjongPrepare'{} | #'C2S_MahjongCancelPrepare'{} | #'S2C_MahjongCancelPrepare'{} | #'Struct_MahjongPlayerBrief'{} | #'C2S_MahjongStart'{} | #'S2C_MahjongStart'{} | #'S2C_MahjongDraw'{} | #'C2S_MahjongDiscard'{} | #'S2C_MahjongDiscard'{} | #'C2S_MahjongPongs'{} | #'S2C_MahjongPongs'{} | #'C2S_MahjongKong'{} | #'S2C_MahjongKong'{} | #'C2S_MahjongChow'{} | #'S2C_MahjongChow'{} | #'C2S_MahjongHu'{} | #'S2C_MahjongHu'{} | #'C2S_MahjongZimo'{} | #'S2C_MahjongZimo'{} | #'C2S_MahjongChangeThree'{} | #'S2C_MahjongChangeThree'{} | #'C2S_MahjongDingQue'{} | #'Struct_MahjongDingQueBrief'{} | #'S2C_MahjongDingQue'{} | #'C2S_MahjongNextGame'{} | #'S2C_MahjongNextGame'{} | #'S2C_MahjongNoPrepare'{} | #'S2C_MahjongNoOwner'{} | #'S2C_MahjongHaveNoPrepare'{} | #'S2C_MahjongFinishChangeThree'{} | #'S2C_MahjongFinishDingQue'{} | #'S2C_MahjongNoPongs'{} | #'S2C_MahjongNoKong'{} | #'S2C_MahjongNoZimo'{} | #'S2C_MahjongNoHu'{} | #'S2C_MahjongHaveNoNextGame'{} | #'S2C_MahjongFinish'{} | #'C2S_MahjongHistory'{} | #'Struct_MahjongHistory'{} | #'S2C_MahjongHistory'{} | #'C2S_Login'{} | #'S2C_Login'{} | #'S2C_Err'{} | #'S2C_PlayerInfo'{} | #'C2S_Heartbeat'{} | #'S2C_Heartbeat'{} | #'C2S_Gm'{} | #'S2C_Gm'{}) -> binary().
 encode_msg(Msg) when tuple_size(Msg) >= 1 ->
     encode_msg(Msg, element(1, Msg), []).
 
--spec encode_msg(#'C2S_MahjongPrepare'{} | #'S2C_MahjongPrepare'{} | #'C2S_MahjongCancelPrepare'{} | #'S2C_MahjongCancelPrepare'{} | #'Struct_MahjongPlayerBrief'{} | #'C2S_MahjongStart'{} | #'S2C_MahjongStart'{} | #'S2C_MahjongDraw'{} | #'C2S_MahjongDiscard'{} | #'S2C_MahjongDiscard'{} | #'C2S_MahjongPongs'{} | #'S2C_MahjongPongs'{} | #'C2S_MahjongKong'{} | #'S2C_MahjongKong'{} | #'C2S_MahjongChow'{} | #'S2C_MahjongChow'{} | #'C2S_MahjongHu'{} | #'S2C_MahjongHu'{} | #'C2S_MahjongZimo'{} | #'S2C_MahjongZimo'{} | #'C2S_MahjongChangeThree'{} | #'S2C_MahjongChangeThree'{} | #'C2S_MahjongDingQue'{} | #'Struct_MahjongDingQueBrief'{} | #'S2C_MahjongDingQue'{} | #'C2S_MahjongNextGame'{} | #'S2C_MahjongNextGame'{} | #'S2C_MahjongNoPrepare'{} | #'S2C_MahjongNoOwner'{} | #'S2C_MahjongHaveNoPrepare'{} | #'S2C_MahjongFinishChangeThree'{} | #'S2C_MahjongFinishDingQue'{} | #'S2C_MahjongNoPongs'{} | #'S2C_MahjongNoKong'{} | #'S2C_MahjongNoZimo'{} | #'S2C_MahjongNoHu'{} | #'S2C_MahjongHaveNoNextGame'{} | #'S2C_MahjongFinish'{} | #'C2S_MahjongHistory'{} | #'Struct_MahjongHistory'{} | #'S2C_MahjongHistory'{} | #'Struct_DeviceInfo'{} | #'S2C_PlayerInfo1'{} | #'Struct_RoomBrief'{} | #'Struct_RoomPlayerBrief'{} | #'C2S_Login'{} | #'S2C_Login'{} | #'S2C_Err'{} | #'C2S_Heartbeat'{} | #'S2C_Heartbeat'{} | #'C2S_Gm'{} | #'S2C_Gm'{}, atom() | list()) -> binary().
+-spec encode_msg(#'C2S_MahjongPrepare'{} | #'S2C_MahjongPrepare'{} | #'C2S_MahjongCancelPrepare'{} | #'S2C_MahjongCancelPrepare'{} | #'Struct_MahjongPlayerBrief'{} | #'C2S_MahjongStart'{} | #'S2C_MahjongStart'{} | #'S2C_MahjongDraw'{} | #'C2S_MahjongDiscard'{} | #'S2C_MahjongDiscard'{} | #'C2S_MahjongPongs'{} | #'S2C_MahjongPongs'{} | #'C2S_MahjongKong'{} | #'S2C_MahjongKong'{} | #'C2S_MahjongChow'{} | #'S2C_MahjongChow'{} | #'C2S_MahjongHu'{} | #'S2C_MahjongHu'{} | #'C2S_MahjongZimo'{} | #'S2C_MahjongZimo'{} | #'C2S_MahjongChangeThree'{} | #'S2C_MahjongChangeThree'{} | #'C2S_MahjongDingQue'{} | #'Struct_MahjongDingQueBrief'{} | #'S2C_MahjongDingQue'{} | #'C2S_MahjongNextGame'{} | #'S2C_MahjongNextGame'{} | #'S2C_MahjongNoPrepare'{} | #'S2C_MahjongNoOwner'{} | #'S2C_MahjongHaveNoPrepare'{} | #'S2C_MahjongFinishChangeThree'{} | #'S2C_MahjongFinishDingQue'{} | #'S2C_MahjongNoPongs'{} | #'S2C_MahjongNoKong'{} | #'S2C_MahjongNoZimo'{} | #'S2C_MahjongNoHu'{} | #'S2C_MahjongHaveNoNextGame'{} | #'S2C_MahjongFinish'{} | #'C2S_MahjongHistory'{} | #'Struct_MahjongHistory'{} | #'S2C_MahjongHistory'{} | #'C2S_Login'{} | #'S2C_Login'{} | #'S2C_Err'{} | #'S2C_PlayerInfo'{} | #'C2S_Heartbeat'{} | #'S2C_Heartbeat'{} | #'C2S_Gm'{} | #'S2C_Gm'{}, atom() | list()) -> binary().
 encode_msg(Msg, MsgName) when is_atom(MsgName) ->
     encode_msg(Msg, MsgName, []);
 encode_msg(Msg, Opts)
     when tuple_size(Msg) >= 1, is_list(Opts) ->
     encode_msg(Msg, element(1, Msg), Opts).
 
--spec encode_msg(#'C2S_MahjongPrepare'{} | #'S2C_MahjongPrepare'{} | #'C2S_MahjongCancelPrepare'{} | #'S2C_MahjongCancelPrepare'{} | #'Struct_MahjongPlayerBrief'{} | #'C2S_MahjongStart'{} | #'S2C_MahjongStart'{} | #'S2C_MahjongDraw'{} | #'C2S_MahjongDiscard'{} | #'S2C_MahjongDiscard'{} | #'C2S_MahjongPongs'{} | #'S2C_MahjongPongs'{} | #'C2S_MahjongKong'{} | #'S2C_MahjongKong'{} | #'C2S_MahjongChow'{} | #'S2C_MahjongChow'{} | #'C2S_MahjongHu'{} | #'S2C_MahjongHu'{} | #'C2S_MahjongZimo'{} | #'S2C_MahjongZimo'{} | #'C2S_MahjongChangeThree'{} | #'S2C_MahjongChangeThree'{} | #'C2S_MahjongDingQue'{} | #'Struct_MahjongDingQueBrief'{} | #'S2C_MahjongDingQue'{} | #'C2S_MahjongNextGame'{} | #'S2C_MahjongNextGame'{} | #'S2C_MahjongNoPrepare'{} | #'S2C_MahjongNoOwner'{} | #'S2C_MahjongHaveNoPrepare'{} | #'S2C_MahjongFinishChangeThree'{} | #'S2C_MahjongFinishDingQue'{} | #'S2C_MahjongNoPongs'{} | #'S2C_MahjongNoKong'{} | #'S2C_MahjongNoZimo'{} | #'S2C_MahjongNoHu'{} | #'S2C_MahjongHaveNoNextGame'{} | #'S2C_MahjongFinish'{} | #'C2S_MahjongHistory'{} | #'Struct_MahjongHistory'{} | #'S2C_MahjongHistory'{} | #'Struct_DeviceInfo'{} | #'S2C_PlayerInfo1'{} | #'Struct_RoomBrief'{} | #'Struct_RoomPlayerBrief'{} | #'C2S_Login'{} | #'S2C_Login'{} | #'S2C_Err'{} | #'C2S_Heartbeat'{} | #'S2C_Heartbeat'{} | #'C2S_Gm'{} | #'S2C_Gm'{}, atom(), list()) -> binary().
+-spec encode_msg(#'C2S_MahjongPrepare'{} | #'S2C_MahjongPrepare'{} | #'C2S_MahjongCancelPrepare'{} | #'S2C_MahjongCancelPrepare'{} | #'Struct_MahjongPlayerBrief'{} | #'C2S_MahjongStart'{} | #'S2C_MahjongStart'{} | #'S2C_MahjongDraw'{} | #'C2S_MahjongDiscard'{} | #'S2C_MahjongDiscard'{} | #'C2S_MahjongPongs'{} | #'S2C_MahjongPongs'{} | #'C2S_MahjongKong'{} | #'S2C_MahjongKong'{} | #'C2S_MahjongChow'{} | #'S2C_MahjongChow'{} | #'C2S_MahjongHu'{} | #'S2C_MahjongHu'{} | #'C2S_MahjongZimo'{} | #'S2C_MahjongZimo'{} | #'C2S_MahjongChangeThree'{} | #'S2C_MahjongChangeThree'{} | #'C2S_MahjongDingQue'{} | #'Struct_MahjongDingQueBrief'{} | #'S2C_MahjongDingQue'{} | #'C2S_MahjongNextGame'{} | #'S2C_MahjongNextGame'{} | #'S2C_MahjongNoPrepare'{} | #'S2C_MahjongNoOwner'{} | #'S2C_MahjongHaveNoPrepare'{} | #'S2C_MahjongFinishChangeThree'{} | #'S2C_MahjongFinishDingQue'{} | #'S2C_MahjongNoPongs'{} | #'S2C_MahjongNoKong'{} | #'S2C_MahjongNoZimo'{} | #'S2C_MahjongNoHu'{} | #'S2C_MahjongHaveNoNextGame'{} | #'S2C_MahjongFinish'{} | #'C2S_MahjongHistory'{} | #'Struct_MahjongHistory'{} | #'S2C_MahjongHistory'{} | #'C2S_Login'{} | #'S2C_Login'{} | #'S2C_Err'{} | #'S2C_PlayerInfo'{} | #'C2S_Heartbeat'{} | #'S2C_Heartbeat'{} | #'C2S_Gm'{} | #'S2C_Gm'{}, atom(), list()) -> binary().
 encode_msg(Msg, MsgName, Opts) ->
     case proplists:get_bool(verify, Opts) of
       true -> verify_msg(Msg, MsgName, Opts);
@@ -285,24 +279,15 @@ encode_msg(Msg, MsgName, Opts) ->
       'S2C_MahjongHistory' ->
 	  encode_msg_S2C_MahjongHistory(id(Msg, TrUserData),
 					TrUserData);
-      'Struct_DeviceInfo' ->
-	  encode_msg_Struct_DeviceInfo(id(Msg, TrUserData),
-				       TrUserData);
-      'S2C_PlayerInfo1' ->
-	  encode_msg_S2C_PlayerInfo1(id(Msg, TrUserData),
-				     TrUserData);
-      'Struct_RoomBrief' ->
-	  encode_msg_Struct_RoomBrief(id(Msg, TrUserData),
-				      TrUserData);
-      'Struct_RoomPlayerBrief' ->
-	  encode_msg_Struct_RoomPlayerBrief(id(Msg, TrUserData),
-					    TrUserData);
       'C2S_Login' ->
 	  encode_msg_C2S_Login(id(Msg, TrUserData), TrUserData);
       'S2C_Login' ->
 	  encode_msg_S2C_Login(id(Msg, TrUserData), TrUserData);
       'S2C_Err' ->
 	  encode_msg_S2C_Err(id(Msg, TrUserData), TrUserData);
+      'S2C_PlayerInfo' ->
+	  encode_msg_S2C_PlayerInfo(id(Msg, TrUserData),
+				    TrUserData);
       'C2S_Heartbeat' ->
 	  encode_msg_C2S_Heartbeat(id(Msg, TrUserData),
 				   TrUserData);
@@ -865,117 +850,15 @@ encode_msg_S2C_MahjongHistory(#'S2C_MahjongHistory'{data
       end
     end.
 
-encode_msg_Struct_DeviceInfo(Msg, TrUserData) ->
-    encode_msg_Struct_DeviceInfo(Msg, <<>>, TrUserData).
-
-
-encode_msg_Struct_DeviceInfo(#'Struct_DeviceInfo'{os =
-						      F1,
-						  deviceType = F2,
-						  resolution = F3,
-						  network = F4},
-			     Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>, TrUserData)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_string(TrF2, <<B1/binary, 18>>, TrUserData)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_type_string(TrF3, <<B2/binary, 26>>, TrUserData)
-	 end,
-    begin
-      TrF4 = id(F4, TrUserData),
-      e_type_string(TrF4, <<B3/binary, 34>>, TrUserData)
-    end.
-
-encode_msg_S2C_PlayerInfo1(Msg, TrUserData) ->
-    encode_msg_S2C_PlayerInfo1(Msg, <<>>, TrUserData).
-
-
-encode_msg_S2C_PlayerInfo1(#'S2C_PlayerInfo1'{moneyLeft
-						  = F1},
-			   Bin, TrUserData) ->
-    begin
-      TrF1 = id(F1, TrUserData),
-      e_varint(TrF1, <<Bin/binary, 16>>, TrUserData)
-    end.
-
-encode_msg_Struct_RoomBrief(Msg, TrUserData) ->
-    encode_msg_Struct_RoomBrief(Msg, <<>>, TrUserData).
-
-
-encode_msg_Struct_RoomBrief(#'Struct_RoomBrief'{roomId =
-						    F1,
-						gameId = F2, playerCount = F3,
-						isLocked = F4, ownerId = F5},
-			    Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_varint(TrF1, <<Bin/binary, 8>>, TrUserData)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_varint(TrF2, <<B1/binary, 16>>, TrUserData)
-	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_varint(TrF3, <<B2/binary, 24>>, TrUserData)
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   e_type_bool(TrF4, <<B3/binary, 32>>, TrUserData)
-	 end,
-    begin
-      TrF5 = id(F5, TrUserData),
-      e_type_string(TrF5, <<B4/binary, 42>>, TrUserData)
-    end.
-
-encode_msg_Struct_RoomPlayerBrief(Msg, TrUserData) ->
-    encode_msg_Struct_RoomPlayerBrief(Msg, <<>>,
-				      TrUserData).
-
-
-encode_msg_Struct_RoomPlayerBrief(#'Struct_RoomPlayerBrief'{id
-								= F1,
-							    nickname = F2,
-							    avatar = F3},
-				  Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 10>>, TrUserData)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_type_string(TrF2, <<B1/binary, 26>>, TrUserData)
-	 end,
-    begin
-      TrF3 = id(F3, TrUserData),
-      e_type_string(TrF3, <<B2/binary, 34>>, TrUserData)
-    end.
-
 encode_msg_C2S_Login(Msg, TrUserData) ->
     encode_msg_C2S_Login(Msg, <<>>, TrUserData).
 
 
-encode_msg_C2S_Login(#'C2S_Login'{token = F1,
-				  version = F2, device = F3},
-		     Bin, TrUserData) ->
-    B1 = begin
-	   TrF1 = id(F1, TrUserData),
-	   e_type_string(TrF1, <<Bin/binary, 18>>, TrUserData)
-	 end,
-    B2 = begin
-	   TrF2 = id(F2, TrUserData),
-	   e_varint(TrF2, <<B1/binary, 24>>, TrUserData)
-	 end,
+encode_msg_C2S_Login(#'C2S_Login'{token = F1}, Bin,
+		     TrUserData) ->
     begin
-      TrF3 = id(F3, TrUserData),
-      e_mfield_C2S_Login_device(TrF3, <<B2/binary, 34>>,
-				TrUserData)
+      TrF1 = id(F1, TrUserData),
+      e_type_string(TrF1, <<Bin/binary, 10>>, TrUserData)
     end.
 
 encode_msg_S2C_Login(Msg, TrUserData) ->
@@ -983,8 +866,7 @@ encode_msg_S2C_Login(Msg, TrUserData) ->
 
 
 encode_msg_S2C_Login(#'S2C_Login'{id = F1,
-				  nickname = F2, money = F3, rooms = F4,
-				  notFinishedRoom = F5},
+				  nickname = F2, money = F3},
 		     Bin, TrUserData) ->
     B1 = begin
 	   TrF1 = id(F1, TrUserData),
@@ -994,23 +876,9 @@ encode_msg_S2C_Login(#'S2C_Login'{id = F1,
 	   TrF2 = id(F2, TrUserData),
 	   e_type_string(TrF2, <<B1/binary, 26>>, TrUserData)
 	 end,
-    B3 = begin
-	   TrF3 = id(F3, TrUserData),
-	   e_varint(TrF3, <<B2/binary, 32>>, TrUserData)
-	 end,
-    B4 = begin
-	   TrF4 = id(F4, TrUserData),
-	   if TrF4 == [] -> B3;
-	      true -> e_field_S2C_Login_rooms(TrF4, B3, TrUserData)
-	   end
-	 end,
-    if F5 == undefined -> B4;
-       true ->
-	   begin
-	     TrF5 = id(F5, TrUserData),
-	     e_mfield_S2C_Login_notFinishedRoom(TrF5,
-						<<B4/binary, 90>>, TrUserData)
-	   end
+    begin
+      TrF3 = id(F3, TrUserData),
+      e_varint(TrF3, <<B2/binary, 32>>, TrUserData)
     end.
 
 encode_msg_S2C_Err(Msg, TrUserData) ->
@@ -1033,6 +901,18 @@ encode_msg_S2C_Err(#'S2C_Err'{code = F1, type = F2,
     begin
       TrF3 = id(F3, TrUserData),
       e_type_string(TrF3, <<B2/binary, 26>>, TrUserData)
+    end.
+
+encode_msg_S2C_PlayerInfo(Msg, TrUserData) ->
+    encode_msg_S2C_PlayerInfo(Msg, <<>>, TrUserData).
+
+
+encode_msg_S2C_PlayerInfo(#'S2C_PlayerInfo'{moneyLeft =
+						F1},
+			  Bin, TrUserData) ->
+    begin
+      TrF1 = id(F1, TrUserData),
+      e_varint(TrF1, <<Bin/binary, 16>>, TrUserData)
     end.
 
 encode_msg_C2S_Heartbeat(_Msg, _TrUserData) -> <<>>.
@@ -1217,33 +1097,6 @@ e_field_S2C_MahjongHistory_data([Elem | Rest], Bin,
     e_field_S2C_MahjongHistory_data(Rest, Bin3, TrUserData);
 e_field_S2C_MahjongHistory_data([], Bin, _TrUserData) ->
     Bin.
-
-e_mfield_C2S_Login_device(Msg, Bin, TrUserData) ->
-    SubBin = encode_msg_Struct_DeviceInfo(Msg, <<>>,
-					  TrUserData),
-    Bin2 = e_varint(byte_size(SubBin), Bin),
-    <<Bin2/binary, SubBin/binary>>.
-
-e_mfield_S2C_Login_rooms(Msg, Bin, TrUserData) ->
-    SubBin = encode_msg_Struct_RoomBrief(Msg, <<>>,
-					 TrUserData),
-    Bin2 = e_varint(byte_size(SubBin), Bin),
-    <<Bin2/binary, SubBin/binary>>.
-
-e_field_S2C_Login_rooms([Elem | Rest], Bin,
-			TrUserData) ->
-    Bin2 = <<Bin/binary, 82>>,
-    Bin3 = e_mfield_S2C_Login_rooms(id(Elem, TrUserData),
-				    Bin2, TrUserData),
-    e_field_S2C_Login_rooms(Rest, Bin3, TrUserData);
-e_field_S2C_Login_rooms([], Bin, _TrUserData) -> Bin.
-
-e_mfield_S2C_Login_notFinishedRoom(Msg, Bin,
-				   TrUserData) ->
-    SubBin = encode_msg_Struct_RoomBrief(Msg, <<>>,
-					 TrUserData),
-    Bin2 = e_varint(byte_size(SubBin), Bin),
-    <<Bin2/binary, SubBin/binary>>.
 
 e_enum_EnumS2CTipsShowType('E_S2CTipsShowType_PopUp',
 			   Bin, _TrUserData) ->
@@ -1568,27 +1421,15 @@ decode_msg_2_doit('S2C_MahjongHistory', Bin,
 		  TrUserData) ->
     id(decode_msg_S2C_MahjongHistory(Bin, TrUserData),
        TrUserData);
-decode_msg_2_doit('Struct_DeviceInfo', Bin,
-		  TrUserData) ->
-    id(decode_msg_Struct_DeviceInfo(Bin, TrUserData),
-       TrUserData);
-decode_msg_2_doit('S2C_PlayerInfo1', Bin, TrUserData) ->
-    id(decode_msg_S2C_PlayerInfo1(Bin, TrUserData),
-       TrUserData);
-decode_msg_2_doit('Struct_RoomBrief', Bin,
-		  TrUserData) ->
-    id(decode_msg_Struct_RoomBrief(Bin, TrUserData),
-       TrUserData);
-decode_msg_2_doit('Struct_RoomPlayerBrief', Bin,
-		  TrUserData) ->
-    id(decode_msg_Struct_RoomPlayerBrief(Bin, TrUserData),
-       TrUserData);
 decode_msg_2_doit('C2S_Login', Bin, TrUserData) ->
     id(decode_msg_C2S_Login(Bin, TrUserData), TrUserData);
 decode_msg_2_doit('S2C_Login', Bin, TrUserData) ->
     id(decode_msg_S2C_Login(Bin, TrUserData), TrUserData);
 decode_msg_2_doit('S2C_Err', Bin, TrUserData) ->
     id(decode_msg_S2C_Err(Bin, TrUserData), TrUserData);
+decode_msg_2_doit('S2C_PlayerInfo', Bin, TrUserData) ->
+    id(decode_msg_S2C_PlayerInfo(Bin, TrUserData),
+       TrUserData);
 decode_msg_2_doit('C2S_Heartbeat', Bin, TrUserData) ->
     id(decode_msg_C2S_Heartbeat(Bin, TrUserData),
        TrUserData);
@@ -6672,821 +6513,55 @@ skip_64_S2C_MahjongHistory(<<_:64, Rest/binary>>, Z1,
     dfp_read_field_def_S2C_MahjongHistory(Rest, Z1, Z2,
 					  F@_1, TrUserData).
 
-decode_msg_Struct_DeviceInfo(Bin, TrUserData) ->
-    dfp_read_field_def_Struct_DeviceInfo(Bin, 0, 0,
-					 id(undefined, TrUserData),
-					 id(undefined, TrUserData),
-					 id(undefined, TrUserData),
-					 id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_Struct_DeviceInfo(<<10,
-				       Rest/binary>>,
-				     Z1, Z2, F@_1, F@_2, F@_3, F@_4,
-				     TrUserData) ->
-    d_field_Struct_DeviceInfo_os(Rest, Z1, Z2, F@_1, F@_2,
-				 F@_3, F@_4, TrUserData);
-dfp_read_field_def_Struct_DeviceInfo(<<18,
-				       Rest/binary>>,
-				     Z1, Z2, F@_1, F@_2, F@_3, F@_4,
-				     TrUserData) ->
-    d_field_Struct_DeviceInfo_deviceType(Rest, Z1, Z2, F@_1,
-					 F@_2, F@_3, F@_4, TrUserData);
-dfp_read_field_def_Struct_DeviceInfo(<<26,
-				       Rest/binary>>,
-				     Z1, Z2, F@_1, F@_2, F@_3, F@_4,
-				     TrUserData) ->
-    d_field_Struct_DeviceInfo_resolution(Rest, Z1, Z2, F@_1,
-					 F@_2, F@_3, F@_4, TrUserData);
-dfp_read_field_def_Struct_DeviceInfo(<<34,
-				       Rest/binary>>,
-				     Z1, Z2, F@_1, F@_2, F@_3, F@_4,
-				     TrUserData) ->
-    d_field_Struct_DeviceInfo_network(Rest, Z1, Z2, F@_1,
-				      F@_2, F@_3, F@_4, TrUserData);
-dfp_read_field_def_Struct_DeviceInfo(<<>>, 0, 0, F@_1,
-				     F@_2, F@_3, F@_4, _) ->
-    #'Struct_DeviceInfo'{os = F@_1, deviceType = F@_2,
-			 resolution = F@_3, network = F@_4};
-dfp_read_field_def_Struct_DeviceInfo(Other, Z1, Z2,
-				     F@_1, F@_2, F@_3, F@_4, TrUserData) ->
-    dg_read_field_def_Struct_DeviceInfo(Other, Z1, Z2, F@_1,
-					F@_2, F@_3, F@_4, TrUserData).
-
-dg_read_field_def_Struct_DeviceInfo(<<1:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F@_1, F@_2, F@_3, F@_4, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_Struct_DeviceInfo(Rest, N + 7,
-					X bsl N + Acc, F@_1, F@_2, F@_3, F@_4,
-					TrUserData);
-dg_read_field_def_Struct_DeviceInfo(<<0:1, X:7,
-				      Rest/binary>>,
-				    N, Acc, F@_1, F@_2, F@_3, F@_4,
-				    TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_Struct_DeviceInfo_os(Rest, 0, 0, F@_1, F@_2,
-				       F@_3, F@_4, TrUserData);
-      18 ->
-	  d_field_Struct_DeviceInfo_deviceType(Rest, 0, 0, F@_1,
-					       F@_2, F@_3, F@_4, TrUserData);
-      26 ->
-	  d_field_Struct_DeviceInfo_resolution(Rest, 0, 0, F@_1,
-					       F@_2, F@_3, F@_4, TrUserData);
-      34 ->
-	  d_field_Struct_DeviceInfo_network(Rest, 0, 0, F@_1,
-					    F@_2, F@_3, F@_4, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_Struct_DeviceInfo(Rest, 0, 0, F@_1, F@_2,
-					      F@_3, F@_4, TrUserData);
-	    1 ->
-		skip_64_Struct_DeviceInfo(Rest, 0, 0, F@_1, F@_2, F@_3,
-					  F@_4, TrUserData);
-	    2 ->
-		skip_length_delimited_Struct_DeviceInfo(Rest, 0, 0,
-							F@_1, F@_2, F@_3, F@_4,
-							TrUserData);
-	    3 ->
-		skip_group_Struct_DeviceInfo(Rest, Key bsr 3, 0, F@_1,
-					     F@_2, F@_3, F@_4, TrUserData);
-	    5 ->
-		skip_32_Struct_DeviceInfo(Rest, 0, 0, F@_1, F@_2, F@_3,
-					  F@_4, TrUserData)
-	  end
-    end;
-dg_read_field_def_Struct_DeviceInfo(<<>>, 0, 0, F@_1,
-				    F@_2, F@_3, F@_4, _) ->
-    #'Struct_DeviceInfo'{os = F@_1, deviceType = F@_2,
-			 resolution = F@_3, network = F@_4}.
-
-d_field_Struct_DeviceInfo_os(<<1:1, X:7, Rest/binary>>,
-			     N, Acc, F@_1, F@_2, F@_3, F@_4, TrUserData)
-    when N < 57 ->
-    d_field_Struct_DeviceInfo_os(Rest, N + 7, X bsl N + Acc,
-				 F@_1, F@_2, F@_3, F@_4, TrUserData);
-d_field_Struct_DeviceInfo_os(<<0:1, X:7, Rest/binary>>,
-			     N, Acc, _, F@_2, F@_3, F@_4, TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
-			   {id(unicode:characters_to_list(Utf8, unicode),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_Struct_DeviceInfo(RestF, 0, 0,
-					 NewFValue, F@_2, F@_3, F@_4,
-					 TrUserData).
-
-d_field_Struct_DeviceInfo_deviceType(<<1:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F@_1, F@_2, F@_3, F@_4, TrUserData)
-    when N < 57 ->
-    d_field_Struct_DeviceInfo_deviceType(Rest, N + 7,
-					 X bsl N + Acc, F@_1, F@_2, F@_3, F@_4,
-					 TrUserData);
-d_field_Struct_DeviceInfo_deviceType(<<0:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F@_1, _, F@_3, F@_4, TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
-			   {id(unicode:characters_to_list(Utf8, unicode),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_Struct_DeviceInfo(RestF, 0, 0, F@_1,
-					 NewFValue, F@_3, F@_4, TrUserData).
-
-d_field_Struct_DeviceInfo_resolution(<<1:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F@_1, F@_2, F@_3, F@_4, TrUserData)
-    when N < 57 ->
-    d_field_Struct_DeviceInfo_resolution(Rest, N + 7,
-					 X bsl N + Acc, F@_1, F@_2, F@_3, F@_4,
-					 TrUserData);
-d_field_Struct_DeviceInfo_resolution(<<0:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F@_1, F@_2, _, F@_4, TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
-			   {id(unicode:characters_to_list(Utf8, unicode),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_Struct_DeviceInfo(RestF, 0, 0, F@_1,
-					 F@_2, NewFValue, F@_4, TrUserData).
-
-d_field_Struct_DeviceInfo_network(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, F@_2, F@_3, F@_4, TrUserData)
-    when N < 57 ->
-    d_field_Struct_DeviceInfo_network(Rest, N + 7,
-				      X bsl N + Acc, F@_1, F@_2, F@_3, F@_4,
-				      TrUserData);
-d_field_Struct_DeviceInfo_network(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, F@_2, F@_3, _, TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
-			   {id(unicode:characters_to_list(Utf8, unicode),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_Struct_DeviceInfo(RestF, 0, 0, F@_1,
-					 F@_2, F@_3, NewFValue, TrUserData).
-
-skip_varint_Struct_DeviceInfo(<<1:1, _:7, Rest/binary>>,
-			      Z1, Z2, F@_1, F@_2, F@_3, F@_4, TrUserData) ->
-    skip_varint_Struct_DeviceInfo(Rest, Z1, Z2, F@_1, F@_2,
-				  F@_3, F@_4, TrUserData);
-skip_varint_Struct_DeviceInfo(<<0:1, _:7, Rest/binary>>,
-			      Z1, Z2, F@_1, F@_2, F@_3, F@_4, TrUserData) ->
-    dfp_read_field_def_Struct_DeviceInfo(Rest, Z1, Z2, F@_1,
-					 F@_2, F@_3, F@_4, TrUserData).
-
-skip_length_delimited_Struct_DeviceInfo(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F@_1, F@_2, F@_3, F@_4,
-					TrUserData)
-    when N < 57 ->
-    skip_length_delimited_Struct_DeviceInfo(Rest, N + 7,
-					    X bsl N + Acc, F@_1, F@_2, F@_3,
-					    F@_4, TrUserData);
-skip_length_delimited_Struct_DeviceInfo(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F@_1, F@_2, F@_3, F@_4,
-					TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_Struct_DeviceInfo(Rest2, 0, 0, F@_1,
-					 F@_2, F@_3, F@_4, TrUserData).
-
-skip_group_Struct_DeviceInfo(Bin, FNum, Z2, F@_1, F@_2,
-			     F@_3, F@_4, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_Struct_DeviceInfo(Rest, 0, Z2, F@_1,
-					 F@_2, F@_3, F@_4, TrUserData).
-
-skip_32_Struct_DeviceInfo(<<_:32, Rest/binary>>, Z1, Z2,
-			  F@_1, F@_2, F@_3, F@_4, TrUserData) ->
-    dfp_read_field_def_Struct_DeviceInfo(Rest, Z1, Z2, F@_1,
-					 F@_2, F@_3, F@_4, TrUserData).
-
-skip_64_Struct_DeviceInfo(<<_:64, Rest/binary>>, Z1, Z2,
-			  F@_1, F@_2, F@_3, F@_4, TrUserData) ->
-    dfp_read_field_def_Struct_DeviceInfo(Rest, Z1, Z2, F@_1,
-					 F@_2, F@_3, F@_4, TrUserData).
-
-decode_msg_S2C_PlayerInfo1(Bin, TrUserData) ->
-    dfp_read_field_def_S2C_PlayerInfo1(Bin, 0, 0,
-				       id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_S2C_PlayerInfo1(<<16, Rest/binary>>,
-				   Z1, Z2, F@_1, TrUserData) ->
-    d_field_S2C_PlayerInfo1_moneyLeft(Rest, Z1, Z2, F@_1,
-				      TrUserData);
-dfp_read_field_def_S2C_PlayerInfo1(<<>>, 0, 0, F@_1,
-				   _) ->
-    #'S2C_PlayerInfo1'{moneyLeft = F@_1};
-dfp_read_field_def_S2C_PlayerInfo1(Other, Z1, Z2, F@_1,
-				   TrUserData) ->
-    dg_read_field_def_S2C_PlayerInfo1(Other, Z1, Z2, F@_1,
-				      TrUserData).
-
-dg_read_field_def_S2C_PlayerInfo1(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_S2C_PlayerInfo1(Rest, N + 7,
-				      X bsl N + Acc, F@_1, TrUserData);
-dg_read_field_def_S2C_PlayerInfo1(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      16 ->
-	  d_field_S2C_PlayerInfo1_moneyLeft(Rest, 0, 0, F@_1,
-					    TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_S2C_PlayerInfo1(Rest, 0, 0, F@_1,
-					    TrUserData);
-	    1 ->
-		skip_64_S2C_PlayerInfo1(Rest, 0, 0, F@_1, TrUserData);
-	    2 ->
-		skip_length_delimited_S2C_PlayerInfo1(Rest, 0, 0, F@_1,
-						      TrUserData);
-	    3 ->
-		skip_group_S2C_PlayerInfo1(Rest, Key bsr 3, 0, F@_1,
-					   TrUserData);
-	    5 ->
-		skip_32_S2C_PlayerInfo1(Rest, 0, 0, F@_1, TrUserData)
-	  end
-    end;
-dg_read_field_def_S2C_PlayerInfo1(<<>>, 0, 0, F@_1,
-				  _) ->
-    #'S2C_PlayerInfo1'{moneyLeft = F@_1}.
-
-d_field_S2C_PlayerInfo1_moneyLeft(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, TrUserData)
-    when N < 57 ->
-    d_field_S2C_PlayerInfo1_moneyLeft(Rest, N + 7,
-				      X bsl N + Acc, F@_1, TrUserData);
-d_field_S2C_PlayerInfo1_moneyLeft(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, _, TrUserData) ->
-    {NewFValue, RestF} = {id(X bsl N + Acc, TrUserData),
-			  Rest},
-    dfp_read_field_def_S2C_PlayerInfo1(RestF, 0, 0,
-				       NewFValue, TrUserData).
-
-skip_varint_S2C_PlayerInfo1(<<1:1, _:7, Rest/binary>>,
-			    Z1, Z2, F@_1, TrUserData) ->
-    skip_varint_S2C_PlayerInfo1(Rest, Z1, Z2, F@_1,
-				TrUserData);
-skip_varint_S2C_PlayerInfo1(<<0:1, _:7, Rest/binary>>,
-			    Z1, Z2, F@_1, TrUserData) ->
-    dfp_read_field_def_S2C_PlayerInfo1(Rest, Z1, Z2, F@_1,
-				       TrUserData).
-
-skip_length_delimited_S2C_PlayerInfo1(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F@_1, TrUserData)
-    when N < 57 ->
-    skip_length_delimited_S2C_PlayerInfo1(Rest, N + 7,
-					  X bsl N + Acc, F@_1, TrUserData);
-skip_length_delimited_S2C_PlayerInfo1(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F@_1, TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_S2C_PlayerInfo1(Rest2, 0, 0, F@_1,
-				       TrUserData).
-
-skip_group_S2C_PlayerInfo1(Bin, FNum, Z2, F@_1,
-			   TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_S2C_PlayerInfo1(Rest, 0, Z2, F@_1,
-				       TrUserData).
-
-skip_32_S2C_PlayerInfo1(<<_:32, Rest/binary>>, Z1, Z2,
-			F@_1, TrUserData) ->
-    dfp_read_field_def_S2C_PlayerInfo1(Rest, Z1, Z2, F@_1,
-				       TrUserData).
-
-skip_64_S2C_PlayerInfo1(<<_:64, Rest/binary>>, Z1, Z2,
-			F@_1, TrUserData) ->
-    dfp_read_field_def_S2C_PlayerInfo1(Rest, Z1, Z2, F@_1,
-				       TrUserData).
-
-decode_msg_Struct_RoomBrief(Bin, TrUserData) ->
-    dfp_read_field_def_Struct_RoomBrief(Bin, 0, 0,
-					id(undefined, TrUserData),
-					id(undefined, TrUserData),
-					id(undefined, TrUserData),
-					id(undefined, TrUserData),
-					id(undefined, TrUserData), TrUserData).
-
-dfp_read_field_def_Struct_RoomBrief(<<8, Rest/binary>>,
-				    Z1, Z2, F@_1, F@_2, F@_3, F@_4, F@_5,
-				    TrUserData) ->
-    d_field_Struct_RoomBrief_roomId(Rest, Z1, Z2, F@_1,
-				    F@_2, F@_3, F@_4, F@_5, TrUserData);
-dfp_read_field_def_Struct_RoomBrief(<<16, Rest/binary>>,
-				    Z1, Z2, F@_1, F@_2, F@_3, F@_4, F@_5,
-				    TrUserData) ->
-    d_field_Struct_RoomBrief_gameId(Rest, Z1, Z2, F@_1,
-				    F@_2, F@_3, F@_4, F@_5, TrUserData);
-dfp_read_field_def_Struct_RoomBrief(<<24, Rest/binary>>,
-				    Z1, Z2, F@_1, F@_2, F@_3, F@_4, F@_5,
-				    TrUserData) ->
-    d_field_Struct_RoomBrief_playerCount(Rest, Z1, Z2, F@_1,
-					 F@_2, F@_3, F@_4, F@_5, TrUserData);
-dfp_read_field_def_Struct_RoomBrief(<<32, Rest/binary>>,
-				    Z1, Z2, F@_1, F@_2, F@_3, F@_4, F@_5,
-				    TrUserData) ->
-    d_field_Struct_RoomBrief_isLocked(Rest, Z1, Z2, F@_1,
-				      F@_2, F@_3, F@_4, F@_5, TrUserData);
-dfp_read_field_def_Struct_RoomBrief(<<42, Rest/binary>>,
-				    Z1, Z2, F@_1, F@_2, F@_3, F@_4, F@_5,
-				    TrUserData) ->
-    d_field_Struct_RoomBrief_ownerId(Rest, Z1, Z2, F@_1,
-				     F@_2, F@_3, F@_4, F@_5, TrUserData);
-dfp_read_field_def_Struct_RoomBrief(<<>>, 0, 0, F@_1,
-				    F@_2, F@_3, F@_4, F@_5, _) ->
-    #'Struct_RoomBrief'{roomId = F@_1, gameId = F@_2,
-			playerCount = F@_3, isLocked = F@_4, ownerId = F@_5};
-dfp_read_field_def_Struct_RoomBrief(Other, Z1, Z2, F@_1,
-				    F@_2, F@_3, F@_4, F@_5, TrUserData) ->
-    dg_read_field_def_Struct_RoomBrief(Other, Z1, Z2, F@_1,
-				       F@_2, F@_3, F@_4, F@_5, TrUserData).
-
-dg_read_field_def_Struct_RoomBrief(<<1:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				   TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_Struct_RoomBrief(Rest, N + 7,
-				       X bsl N + Acc, F@_1, F@_2, F@_3, F@_4,
-				       F@_5, TrUserData);
-dg_read_field_def_Struct_RoomBrief(<<0:1, X:7,
-				     Rest/binary>>,
-				   N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				   TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      8 ->
-	  d_field_Struct_RoomBrief_roomId(Rest, 0, 0, F@_1, F@_2,
-					  F@_3, F@_4, F@_5, TrUserData);
-      16 ->
-	  d_field_Struct_RoomBrief_gameId(Rest, 0, 0, F@_1, F@_2,
-					  F@_3, F@_4, F@_5, TrUserData);
-      24 ->
-	  d_field_Struct_RoomBrief_playerCount(Rest, 0, 0, F@_1,
-					       F@_2, F@_3, F@_4, F@_5,
-					       TrUserData);
-      32 ->
-	  d_field_Struct_RoomBrief_isLocked(Rest, 0, 0, F@_1,
-					    F@_2, F@_3, F@_4, F@_5, TrUserData);
-      42 ->
-	  d_field_Struct_RoomBrief_ownerId(Rest, 0, 0, F@_1, F@_2,
-					   F@_3, F@_4, F@_5, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_Struct_RoomBrief(Rest, 0, 0, F@_1, F@_2,
-					     F@_3, F@_4, F@_5, TrUserData);
-	    1 ->
-		skip_64_Struct_RoomBrief(Rest, 0, 0, F@_1, F@_2, F@_3,
-					 F@_4, F@_5, TrUserData);
-	    2 ->
-		skip_length_delimited_Struct_RoomBrief(Rest, 0, 0, F@_1,
-						       F@_2, F@_3, F@_4, F@_5,
-						       TrUserData);
-	    3 ->
-		skip_group_Struct_RoomBrief(Rest, Key bsr 3, 0, F@_1,
-					    F@_2, F@_3, F@_4, F@_5, TrUserData);
-	    5 ->
-		skip_32_Struct_RoomBrief(Rest, 0, 0, F@_1, F@_2, F@_3,
-					 F@_4, F@_5, TrUserData)
-	  end
-    end;
-dg_read_field_def_Struct_RoomBrief(<<>>, 0, 0, F@_1,
-				   F@_2, F@_3, F@_4, F@_5, _) ->
-    #'Struct_RoomBrief'{roomId = F@_1, gameId = F@_2,
-			playerCount = F@_3, isLocked = F@_4, ownerId = F@_5}.
-
-d_field_Struct_RoomBrief_roomId(<<1:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				TrUserData)
-    when N < 57 ->
-    d_field_Struct_RoomBrief_roomId(Rest, N + 7,
-				    X bsl N + Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				    TrUserData);
-d_field_Struct_RoomBrief_roomId(<<0:1, X:7,
-				  Rest/binary>>,
-				N, Acc, _, F@_2, F@_3, F@_4, F@_5,
-				TrUserData) ->
-    {NewFValue, RestF} = {id(X bsl N + Acc, TrUserData),
-			  Rest},
-    dfp_read_field_def_Struct_RoomBrief(RestF, 0, 0,
-					NewFValue, F@_2, F@_3, F@_4, F@_5,
-					TrUserData).
-
-d_field_Struct_RoomBrief_gameId(<<1:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				TrUserData)
-    when N < 57 ->
-    d_field_Struct_RoomBrief_gameId(Rest, N + 7,
-				    X bsl N + Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				    TrUserData);
-d_field_Struct_RoomBrief_gameId(<<0:1, X:7,
-				  Rest/binary>>,
-				N, Acc, F@_1, _, F@_3, F@_4, F@_5,
-				TrUserData) ->
-    {NewFValue, RestF} = {id(X bsl N + Acc, TrUserData),
-			  Rest},
-    dfp_read_field_def_Struct_RoomBrief(RestF, 0, 0, F@_1,
-					NewFValue, F@_3, F@_4, F@_5,
-					TrUserData).
-
-d_field_Struct_RoomBrief_playerCount(<<1:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				     TrUserData)
-    when N < 57 ->
-    d_field_Struct_RoomBrief_playerCount(Rest, N + 7,
-					 X bsl N + Acc, F@_1, F@_2, F@_3, F@_4,
-					 F@_5, TrUserData);
-d_field_Struct_RoomBrief_playerCount(<<0:1, X:7,
-				       Rest/binary>>,
-				     N, Acc, F@_1, F@_2, _, F@_4, F@_5,
-				     TrUserData) ->
-    {NewFValue, RestF} = {id(X bsl N + Acc, TrUserData),
-			  Rest},
-    dfp_read_field_def_Struct_RoomBrief(RestF, 0, 0, F@_1,
-					F@_2, NewFValue, F@_4, F@_5,
-					TrUserData).
-
-d_field_Struct_RoomBrief_isLocked(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				  TrUserData)
-    when N < 57 ->
-    d_field_Struct_RoomBrief_isLocked(Rest, N + 7,
-				      X bsl N + Acc, F@_1, F@_2, F@_3, F@_4,
-				      F@_5, TrUserData);
-d_field_Struct_RoomBrief_isLocked(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, F@_2, F@_3, _, F@_5,
-				  TrUserData) ->
-    {NewFValue, RestF} = {id(X bsl N + Acc =/= 0,
-			     TrUserData),
-			  Rest},
-    dfp_read_field_def_Struct_RoomBrief(RestF, 0, 0, F@_1,
-					F@_2, F@_3, NewFValue, F@_5,
-					TrUserData).
-
-d_field_Struct_RoomBrief_ownerId(<<1:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				 TrUserData)
-    when N < 57 ->
-    d_field_Struct_RoomBrief_ownerId(Rest, N + 7,
-				     X bsl N + Acc, F@_1, F@_2, F@_3, F@_4,
-				     F@_5, TrUserData);
-d_field_Struct_RoomBrief_ownerId(<<0:1, X:7,
-				   Rest/binary>>,
-				 N, Acc, F@_1, F@_2, F@_3, F@_4, _,
-				 TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
-			   {id(unicode:characters_to_list(Utf8, unicode),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_Struct_RoomBrief(RestF, 0, 0, F@_1,
-					F@_2, F@_3, F@_4, NewFValue,
-					TrUserData).
-
-skip_varint_Struct_RoomBrief(<<1:1, _:7, Rest/binary>>,
-			     Z1, Z2, F@_1, F@_2, F@_3, F@_4, F@_5,
-			     TrUserData) ->
-    skip_varint_Struct_RoomBrief(Rest, Z1, Z2, F@_1, F@_2,
-				 F@_3, F@_4, F@_5, TrUserData);
-skip_varint_Struct_RoomBrief(<<0:1, _:7, Rest/binary>>,
-			     Z1, Z2, F@_1, F@_2, F@_3, F@_4, F@_5,
-			     TrUserData) ->
-    dfp_read_field_def_Struct_RoomBrief(Rest, Z1, Z2, F@_1,
-					F@_2, F@_3, F@_4, F@_5, TrUserData).
-
-skip_length_delimited_Struct_RoomBrief(<<1:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				       TrUserData)
-    when N < 57 ->
-    skip_length_delimited_Struct_RoomBrief(Rest, N + 7,
-					   X bsl N + Acc, F@_1, F@_2, F@_3,
-					   F@_4, F@_5, TrUserData);
-skip_length_delimited_Struct_RoomBrief(<<0:1, X:7,
-					 Rest/binary>>,
-				       N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				       TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_Struct_RoomBrief(Rest2, 0, 0, F@_1,
-					F@_2, F@_3, F@_4, F@_5, TrUserData).
-
-skip_group_Struct_RoomBrief(Bin, FNum, Z2, F@_1, F@_2,
-			    F@_3, F@_4, F@_5, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_Struct_RoomBrief(Rest, 0, Z2, F@_1,
-					F@_2, F@_3, F@_4, F@_5, TrUserData).
-
-skip_32_Struct_RoomBrief(<<_:32, Rest/binary>>, Z1, Z2,
-			 F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
-    dfp_read_field_def_Struct_RoomBrief(Rest, Z1, Z2, F@_1,
-					F@_2, F@_3, F@_4, F@_5, TrUserData).
-
-skip_64_Struct_RoomBrief(<<_:64, Rest/binary>>, Z1, Z2,
-			 F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
-    dfp_read_field_def_Struct_RoomBrief(Rest, Z1, Z2, F@_1,
-					F@_2, F@_3, F@_4, F@_5, TrUserData).
-
-decode_msg_Struct_RoomPlayerBrief(Bin, TrUserData) ->
-    dfp_read_field_def_Struct_RoomPlayerBrief(Bin, 0, 0,
-					      id(undefined, TrUserData),
-					      id(undefined, TrUserData),
-					      id(undefined, TrUserData),
-					      TrUserData).
-
-dfp_read_field_def_Struct_RoomPlayerBrief(<<10,
-					    Rest/binary>>,
-					  Z1, Z2, F@_1, F@_2, F@_3,
-					  TrUserData) ->
-    d_field_Struct_RoomPlayerBrief_id(Rest, Z1, Z2, F@_1,
-				      F@_2, F@_3, TrUserData);
-dfp_read_field_def_Struct_RoomPlayerBrief(<<26,
-					    Rest/binary>>,
-					  Z1, Z2, F@_1, F@_2, F@_3,
-					  TrUserData) ->
-    d_field_Struct_RoomPlayerBrief_nickname(Rest, Z1, Z2,
-					    F@_1, F@_2, F@_3, TrUserData);
-dfp_read_field_def_Struct_RoomPlayerBrief(<<34,
-					    Rest/binary>>,
-					  Z1, Z2, F@_1, F@_2, F@_3,
-					  TrUserData) ->
-    d_field_Struct_RoomPlayerBrief_avatar(Rest, Z1, Z2,
-					  F@_1, F@_2, F@_3, TrUserData);
-dfp_read_field_def_Struct_RoomPlayerBrief(<<>>, 0, 0,
-					  F@_1, F@_2, F@_3, _) ->
-    #'Struct_RoomPlayerBrief'{id = F@_1, nickname = F@_2,
-			      avatar = F@_3};
-dfp_read_field_def_Struct_RoomPlayerBrief(Other, Z1, Z2,
-					  F@_1, F@_2, F@_3, TrUserData) ->
-    dg_read_field_def_Struct_RoomPlayerBrief(Other, Z1, Z2,
-					     F@_1, F@_2, F@_3, TrUserData).
-
-dg_read_field_def_Struct_RoomPlayerBrief(<<1:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F@_1, F@_2, F@_3, TrUserData)
-    when N < 32 - 7 ->
-    dg_read_field_def_Struct_RoomPlayerBrief(Rest, N + 7,
-					     X bsl N + Acc, F@_1, F@_2, F@_3,
-					     TrUserData);
-dg_read_field_def_Struct_RoomPlayerBrief(<<0:1, X:7,
-					   Rest/binary>>,
-					 N, Acc, F@_1, F@_2, F@_3,
-					 TrUserData) ->
-    Key = X bsl N + Acc,
-    case Key of
-      10 ->
-	  d_field_Struct_RoomPlayerBrief_id(Rest, 0, 0, F@_1,
-					    F@_2, F@_3, TrUserData);
-      26 ->
-	  d_field_Struct_RoomPlayerBrief_nickname(Rest, 0, 0,
-						  F@_1, F@_2, F@_3, TrUserData);
-      34 ->
-	  d_field_Struct_RoomPlayerBrief_avatar(Rest, 0, 0, F@_1,
-						F@_2, F@_3, TrUserData);
-      _ ->
-	  case Key band 7 of
-	    0 ->
-		skip_varint_Struct_RoomPlayerBrief(Rest, 0, 0, F@_1,
-						   F@_2, F@_3, TrUserData);
-	    1 ->
-		skip_64_Struct_RoomPlayerBrief(Rest, 0, 0, F@_1, F@_2,
-					       F@_3, TrUserData);
-	    2 ->
-		skip_length_delimited_Struct_RoomPlayerBrief(Rest, 0, 0,
-							     F@_1, F@_2, F@_3,
-							     TrUserData);
-	    3 ->
-		skip_group_Struct_RoomPlayerBrief(Rest, Key bsr 3, 0,
-						  F@_1, F@_2, F@_3, TrUserData);
-	    5 ->
-		skip_32_Struct_RoomPlayerBrief(Rest, 0, 0, F@_1, F@_2,
-					       F@_3, TrUserData)
-	  end
-    end;
-dg_read_field_def_Struct_RoomPlayerBrief(<<>>, 0, 0,
-					 F@_1, F@_2, F@_3, _) ->
-    #'Struct_RoomPlayerBrief'{id = F@_1, nickname = F@_2,
-			      avatar = F@_3}.
-
-d_field_Struct_RoomPlayerBrief_id(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, F@_2, F@_3, TrUserData)
-    when N < 57 ->
-    d_field_Struct_RoomPlayerBrief_id(Rest, N + 7,
-				      X bsl N + Acc, F@_1, F@_2, F@_3,
-				      TrUserData);
-d_field_Struct_RoomPlayerBrief_id(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, _, F@_2, F@_3, TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
-			   {id(unicode:characters_to_list(Utf8, unicode),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_Struct_RoomPlayerBrief(RestF, 0, 0,
-					      NewFValue, F@_2, F@_3,
-					      TrUserData).
-
-d_field_Struct_RoomPlayerBrief_nickname(<<1:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F@_1, F@_2, F@_3, TrUserData)
-    when N < 57 ->
-    d_field_Struct_RoomPlayerBrief_nickname(Rest, N + 7,
-					    X bsl N + Acc, F@_1, F@_2, F@_3,
-					    TrUserData);
-d_field_Struct_RoomPlayerBrief_nickname(<<0:1, X:7,
-					  Rest/binary>>,
-					N, Acc, F@_1, _, F@_3, TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
-			   {id(unicode:characters_to_list(Utf8, unicode),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_Struct_RoomPlayerBrief(RestF, 0, 0,
-					      F@_1, NewFValue, F@_3,
-					      TrUserData).
-
-d_field_Struct_RoomPlayerBrief_avatar(<<1:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F@_1, F@_2, F@_3, TrUserData)
-    when N < 57 ->
-    d_field_Struct_RoomPlayerBrief_avatar(Rest, N + 7,
-					  X bsl N + Acc, F@_1, F@_2, F@_3,
-					  TrUserData);
-d_field_Struct_RoomPlayerBrief_avatar(<<0:1, X:7,
-					Rest/binary>>,
-				      N, Acc, F@_1, F@_2, _, TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
-			   {id(unicode:characters_to_list(Utf8, unicode),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_Struct_RoomPlayerBrief(RestF, 0, 0,
-					      F@_1, F@_2, NewFValue,
-					      TrUserData).
-
-skip_varint_Struct_RoomPlayerBrief(<<1:1, _:7,
-				     Rest/binary>>,
-				   Z1, Z2, F@_1, F@_2, F@_3, TrUserData) ->
-    skip_varint_Struct_RoomPlayerBrief(Rest, Z1, Z2, F@_1,
-				       F@_2, F@_3, TrUserData);
-skip_varint_Struct_RoomPlayerBrief(<<0:1, _:7,
-				     Rest/binary>>,
-				   Z1, Z2, F@_1, F@_2, F@_3, TrUserData) ->
-    dfp_read_field_def_Struct_RoomPlayerBrief(Rest, Z1, Z2,
-					      F@_1, F@_2, F@_3, TrUserData).
-
-skip_length_delimited_Struct_RoomPlayerBrief(<<1:1, X:7,
-					       Rest/binary>>,
-					     N, Acc, F@_1, F@_2, F@_3,
-					     TrUserData)
-    when N < 57 ->
-    skip_length_delimited_Struct_RoomPlayerBrief(Rest,
-						 N + 7, X bsl N + Acc, F@_1,
-						 F@_2, F@_3, TrUserData);
-skip_length_delimited_Struct_RoomPlayerBrief(<<0:1, X:7,
-					       Rest/binary>>,
-					     N, Acc, F@_1, F@_2, F@_3,
-					     TrUserData) ->
-    Length = X bsl N + Acc,
-    <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_Struct_RoomPlayerBrief(Rest2, 0, 0,
-					      F@_1, F@_2, F@_3, TrUserData).
-
-skip_group_Struct_RoomPlayerBrief(Bin, FNum, Z2, F@_1,
-				  F@_2, F@_3, TrUserData) ->
-    {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_Struct_RoomPlayerBrief(Rest, 0, Z2,
-					      F@_1, F@_2, F@_3, TrUserData).
-
-skip_32_Struct_RoomPlayerBrief(<<_:32, Rest/binary>>,
-			       Z1, Z2, F@_1, F@_2, F@_3, TrUserData) ->
-    dfp_read_field_def_Struct_RoomPlayerBrief(Rest, Z1, Z2,
-					      F@_1, F@_2, F@_3, TrUserData).
-
-skip_64_Struct_RoomPlayerBrief(<<_:64, Rest/binary>>,
-			       Z1, Z2, F@_1, F@_2, F@_3, TrUserData) ->
-    dfp_read_field_def_Struct_RoomPlayerBrief(Rest, Z1, Z2,
-					      F@_1, F@_2, F@_3, TrUserData).
-
 decode_msg_C2S_Login(Bin, TrUserData) ->
     dfp_read_field_def_C2S_Login(Bin, 0, 0,
-				 id(undefined, TrUserData),
-				 id(undefined, TrUserData),
 				 id(undefined, TrUserData), TrUserData).
 
-dfp_read_field_def_C2S_Login(<<18, Rest/binary>>, Z1,
-			     Z2, F@_1, F@_2, F@_3, TrUserData) ->
-    d_field_C2S_Login_token(Rest, Z1, Z2, F@_1, F@_2, F@_3,
-			    TrUserData);
-dfp_read_field_def_C2S_Login(<<24, Rest/binary>>, Z1,
-			     Z2, F@_1, F@_2, F@_3, TrUserData) ->
-    d_field_C2S_Login_version(Rest, Z1, Z2, F@_1, F@_2,
-			      F@_3, TrUserData);
-dfp_read_field_def_C2S_Login(<<34, Rest/binary>>, Z1,
-			     Z2, F@_1, F@_2, F@_3, TrUserData) ->
-    d_field_C2S_Login_device(Rest, Z1, Z2, F@_1, F@_2, F@_3,
-			     TrUserData);
-dfp_read_field_def_C2S_Login(<<>>, 0, 0, F@_1, F@_2,
-			     F@_3, _) ->
-    #'C2S_Login'{token = F@_1, version = F@_2,
-		 device = F@_3};
-dfp_read_field_def_C2S_Login(Other, Z1, Z2, F@_1, F@_2,
-			     F@_3, TrUserData) ->
-    dg_read_field_def_C2S_Login(Other, Z1, Z2, F@_1, F@_2,
-				F@_3, TrUserData).
+dfp_read_field_def_C2S_Login(<<10, Rest/binary>>, Z1,
+			     Z2, F@_1, TrUserData) ->
+    d_field_C2S_Login_token(Rest, Z1, Z2, F@_1, TrUserData);
+dfp_read_field_def_C2S_Login(<<>>, 0, 0, F@_1, _) ->
+    #'C2S_Login'{token = F@_1};
+dfp_read_field_def_C2S_Login(Other, Z1, Z2, F@_1,
+			     TrUserData) ->
+    dg_read_field_def_C2S_Login(Other, Z1, Z2, F@_1,
+				TrUserData).
 
 dg_read_field_def_C2S_Login(<<1:1, X:7, Rest/binary>>,
-			    N, Acc, F@_1, F@_2, F@_3, TrUserData)
+			    N, Acc, F@_1, TrUserData)
     when N < 32 - 7 ->
     dg_read_field_def_C2S_Login(Rest, N + 7, X bsl N + Acc,
-				F@_1, F@_2, F@_3, TrUserData);
+				F@_1, TrUserData);
 dg_read_field_def_C2S_Login(<<0:1, X:7, Rest/binary>>,
-			    N, Acc, F@_1, F@_2, F@_3, TrUserData) ->
+			    N, Acc, F@_1, TrUserData) ->
     Key = X bsl N + Acc,
     case Key of
-      18 ->
-	  d_field_C2S_Login_token(Rest, 0, 0, F@_1, F@_2, F@_3,
-				  TrUserData);
-      24 ->
-	  d_field_C2S_Login_version(Rest, 0, 0, F@_1, F@_2, F@_3,
-				    TrUserData);
-      34 ->
-	  d_field_C2S_Login_device(Rest, 0, 0, F@_1, F@_2, F@_3,
-				   TrUserData);
+      10 ->
+	  d_field_C2S_Login_token(Rest, 0, 0, F@_1, TrUserData);
       _ ->
 	  case Key band 7 of
 	    0 ->
-		skip_varint_C2S_Login(Rest, 0, 0, F@_1, F@_2, F@_3,
-				      TrUserData);
-	    1 ->
-		skip_64_C2S_Login(Rest, 0, 0, F@_1, F@_2, F@_3,
-				  TrUserData);
+		skip_varint_C2S_Login(Rest, 0, 0, F@_1, TrUserData);
+	    1 -> skip_64_C2S_Login(Rest, 0, 0, F@_1, TrUserData);
 	    2 ->
-		skip_length_delimited_C2S_Login(Rest, 0, 0, F@_1, F@_2,
-						F@_3, TrUserData);
+		skip_length_delimited_C2S_Login(Rest, 0, 0, F@_1,
+						TrUserData);
 	    3 ->
-		skip_group_C2S_Login(Rest, Key bsr 3, 0, F@_1, F@_2,
-				     F@_3, TrUserData);
-	    5 ->
-		skip_32_C2S_Login(Rest, 0, 0, F@_1, F@_2, F@_3,
-				  TrUserData)
+		skip_group_C2S_Login(Rest, Key bsr 3, 0, F@_1,
+				     TrUserData);
+	    5 -> skip_32_C2S_Login(Rest, 0, 0, F@_1, TrUserData)
 	  end
     end;
-dg_read_field_def_C2S_Login(<<>>, 0, 0, F@_1, F@_2,
-			    F@_3, _) ->
-    #'C2S_Login'{token = F@_1, version = F@_2,
-		 device = F@_3}.
+dg_read_field_def_C2S_Login(<<>>, 0, 0, F@_1, _) ->
+    #'C2S_Login'{token = F@_1}.
 
 d_field_C2S_Login_token(<<1:1, X:7, Rest/binary>>, N,
-			Acc, F@_1, F@_2, F@_3, TrUserData)
+			Acc, F@_1, TrUserData)
     when N < 57 ->
     d_field_C2S_Login_token(Rest, N + 7, X bsl N + Acc,
-			    F@_1, F@_2, F@_3, TrUserData);
+			    F@_1, TrUserData);
 d_field_C2S_Login_token(<<0:1, X:7, Rest/binary>>, N,
-			Acc, _, F@_2, F@_3, TrUserData) ->
+			Acc, _, TrUserData) ->
     {NewFValue, RestF} = begin
 			   Len = X bsl N + Acc,
 			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
@@ -7495,176 +6570,119 @@ d_field_C2S_Login_token(<<0:1, X:7, Rest/binary>>, N,
 			    Rest2}
 			 end,
     dfp_read_field_def_C2S_Login(RestF, 0, 0, NewFValue,
-				 F@_2, F@_3, TrUserData).
-
-d_field_C2S_Login_version(<<1:1, X:7, Rest/binary>>, N,
-			  Acc, F@_1, F@_2, F@_3, TrUserData)
-    when N < 57 ->
-    d_field_C2S_Login_version(Rest, N + 7, X bsl N + Acc,
-			      F@_1, F@_2, F@_3, TrUserData);
-d_field_C2S_Login_version(<<0:1, X:7, Rest/binary>>, N,
-			  Acc, F@_1, _, F@_3, TrUserData) ->
-    {NewFValue, RestF} = {id(X bsl N + Acc, TrUserData),
-			  Rest},
-    dfp_read_field_def_C2S_Login(RestF, 0, 0, F@_1,
-				 NewFValue, F@_3, TrUserData).
-
-d_field_C2S_Login_device(<<1:1, X:7, Rest/binary>>, N,
-			 Acc, F@_1, F@_2, F@_3, TrUserData)
-    when N < 57 ->
-    d_field_C2S_Login_device(Rest, N + 7, X bsl N + Acc,
-			     F@_1, F@_2, F@_3, TrUserData);
-d_field_C2S_Login_device(<<0:1, X:7, Rest/binary>>, N,
-			 Acc, F@_1, F@_2, Prev, TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Bs:Len/binary, Rest2/binary>> = Rest,
-			   {id(decode_msg_Struct_DeviceInfo(Bs, TrUserData),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_C2S_Login(RestF, 0, 0, F@_1, F@_2,
-				 if Prev == undefined -> NewFValue;
-				    true ->
-					merge_msg_Struct_DeviceInfo(Prev,
-								    NewFValue,
-								    TrUserData)
-				 end,
 				 TrUserData).
 
 skip_varint_C2S_Login(<<1:1, _:7, Rest/binary>>, Z1, Z2,
-		      F@_1, F@_2, F@_3, TrUserData) ->
-    skip_varint_C2S_Login(Rest, Z1, Z2, F@_1, F@_2, F@_3,
-			  TrUserData);
+		      F@_1, TrUserData) ->
+    skip_varint_C2S_Login(Rest, Z1, Z2, F@_1, TrUserData);
 skip_varint_C2S_Login(<<0:1, _:7, Rest/binary>>, Z1, Z2,
-		      F@_1, F@_2, F@_3, TrUserData) ->
-    dfp_read_field_def_C2S_Login(Rest, Z1, Z2, F@_1, F@_2,
-				 F@_3, TrUserData).
+		      F@_1, TrUserData) ->
+    dfp_read_field_def_C2S_Login(Rest, Z1, Z2, F@_1,
+				 TrUserData).
 
 skip_length_delimited_C2S_Login(<<1:1, X:7,
 				  Rest/binary>>,
-				N, Acc, F@_1, F@_2, F@_3, TrUserData)
+				N, Acc, F@_1, TrUserData)
     when N < 57 ->
     skip_length_delimited_C2S_Login(Rest, N + 7,
-				    X bsl N + Acc, F@_1, F@_2, F@_3,
-				    TrUserData);
+				    X bsl N + Acc, F@_1, TrUserData);
 skip_length_delimited_C2S_Login(<<0:1, X:7,
 				  Rest/binary>>,
-				N, Acc, F@_1, F@_2, F@_3, TrUserData) ->
+				N, Acc, F@_1, TrUserData) ->
     Length = X bsl N + Acc,
     <<_:Length/binary, Rest2/binary>> = Rest,
-    dfp_read_field_def_C2S_Login(Rest2, 0, 0, F@_1, F@_2,
-				 F@_3, TrUserData).
+    dfp_read_field_def_C2S_Login(Rest2, 0, 0, F@_1,
+				 TrUserData).
 
-skip_group_C2S_Login(Bin, FNum, Z2, F@_1, F@_2, F@_3,
-		     TrUserData) ->
+skip_group_C2S_Login(Bin, FNum, Z2, F@_1, TrUserData) ->
     {_, Rest} = read_group(Bin, FNum),
-    dfp_read_field_def_C2S_Login(Rest, 0, Z2, F@_1, F@_2,
-				 F@_3, TrUserData).
+    dfp_read_field_def_C2S_Login(Rest, 0, Z2, F@_1,
+				 TrUserData).
 
 skip_32_C2S_Login(<<_:32, Rest/binary>>, Z1, Z2, F@_1,
-		  F@_2, F@_3, TrUserData) ->
-    dfp_read_field_def_C2S_Login(Rest, Z1, Z2, F@_1, F@_2,
-				 F@_3, TrUserData).
+		  TrUserData) ->
+    dfp_read_field_def_C2S_Login(Rest, Z1, Z2, F@_1,
+				 TrUserData).
 
 skip_64_C2S_Login(<<_:64, Rest/binary>>, Z1, Z2, F@_1,
-		  F@_2, F@_3, TrUserData) ->
-    dfp_read_field_def_C2S_Login(Rest, Z1, Z2, F@_1, F@_2,
-				 F@_3, TrUserData).
+		  TrUserData) ->
+    dfp_read_field_def_C2S_Login(Rest, Z1, Z2, F@_1,
+				 TrUserData).
 
 decode_msg_S2C_Login(Bin, TrUserData) ->
     dfp_read_field_def_S2C_Login(Bin, 0, 0,
 				 id(undefined, TrUserData),
 				 id(undefined, TrUserData),
-				 id(undefined, TrUserData), id([], TrUserData),
 				 id(undefined, TrUserData), TrUserData).
 
 dfp_read_field_def_S2C_Login(<<10, Rest/binary>>, Z1,
-			     Z2, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
+			     Z2, F@_1, F@_2, F@_3, TrUserData) ->
     d_field_S2C_Login_id(Rest, Z1, Z2, F@_1, F@_2, F@_3,
-			 F@_4, F@_5, TrUserData);
+			 TrUserData);
 dfp_read_field_def_S2C_Login(<<26, Rest/binary>>, Z1,
-			     Z2, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
+			     Z2, F@_1, F@_2, F@_3, TrUserData) ->
     d_field_S2C_Login_nickname(Rest, Z1, Z2, F@_1, F@_2,
-			       F@_3, F@_4, F@_5, TrUserData);
+			       F@_3, TrUserData);
 dfp_read_field_def_S2C_Login(<<32, Rest/binary>>, Z1,
-			     Z2, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
+			     Z2, F@_1, F@_2, F@_3, TrUserData) ->
     d_field_S2C_Login_money(Rest, Z1, Z2, F@_1, F@_2, F@_3,
-			    F@_4, F@_5, TrUserData);
-dfp_read_field_def_S2C_Login(<<82, Rest/binary>>, Z1,
-			     Z2, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
-    d_field_S2C_Login_rooms(Rest, Z1, Z2, F@_1, F@_2, F@_3,
-			    F@_4, F@_5, TrUserData);
-dfp_read_field_def_S2C_Login(<<90, Rest/binary>>, Z1,
-			     Z2, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
-    d_field_S2C_Login_notFinishedRoom(Rest, Z1, Z2, F@_1,
-				      F@_2, F@_3, F@_4, F@_5, TrUserData);
+			    TrUserData);
 dfp_read_field_def_S2C_Login(<<>>, 0, 0, F@_1, F@_2,
-			     F@_3, R1, F@_5, TrUserData) ->
-    #'S2C_Login'{id = F@_1, nickname = F@_2, money = F@_3,
-		 rooms = lists_reverse(R1, TrUserData),
-		 notFinishedRoom = F@_5};
+			     F@_3, _) ->
+    #'S2C_Login'{id = F@_1, nickname = F@_2, money = F@_3};
 dfp_read_field_def_S2C_Login(Other, Z1, Z2, F@_1, F@_2,
-			     F@_3, F@_4, F@_5, TrUserData) ->
+			     F@_3, TrUserData) ->
     dg_read_field_def_S2C_Login(Other, Z1, Z2, F@_1, F@_2,
-				F@_3, F@_4, F@_5, TrUserData).
+				F@_3, TrUserData).
 
 dg_read_field_def_S2C_Login(<<1:1, X:7, Rest/binary>>,
-			    N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData)
+			    N, Acc, F@_1, F@_2, F@_3, TrUserData)
     when N < 32 - 7 ->
     dg_read_field_def_S2C_Login(Rest, N + 7, X bsl N + Acc,
-				F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData);
+				F@_1, F@_2, F@_3, TrUserData);
 dg_read_field_def_S2C_Login(<<0:1, X:7, Rest/binary>>,
-			    N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
+			    N, Acc, F@_1, F@_2, F@_3, TrUserData) ->
     Key = X bsl N + Acc,
     case Key of
       10 ->
-	  d_field_S2C_Login_id(Rest, 0, 0, F@_1, F@_2, F@_3, F@_4,
-			       F@_5, TrUserData);
+	  d_field_S2C_Login_id(Rest, 0, 0, F@_1, F@_2, F@_3,
+			       TrUserData);
       26 ->
 	  d_field_S2C_Login_nickname(Rest, 0, 0, F@_1, F@_2, F@_3,
-				     F@_4, F@_5, TrUserData);
+				     TrUserData);
       32 ->
 	  d_field_S2C_Login_money(Rest, 0, 0, F@_1, F@_2, F@_3,
-				  F@_4, F@_5, TrUserData);
-      82 ->
-	  d_field_S2C_Login_rooms(Rest, 0, 0, F@_1, F@_2, F@_3,
-				  F@_4, F@_5, TrUserData);
-      90 ->
-	  d_field_S2C_Login_notFinishedRoom(Rest, 0, 0, F@_1,
-					    F@_2, F@_3, F@_4, F@_5, TrUserData);
+				  TrUserData);
       _ ->
 	  case Key band 7 of
 	    0 ->
 		skip_varint_S2C_Login(Rest, 0, 0, F@_1, F@_2, F@_3,
-				      F@_4, F@_5, TrUserData);
+				      TrUserData);
 	    1 ->
-		skip_64_S2C_Login(Rest, 0, 0, F@_1, F@_2, F@_3, F@_4,
-				  F@_5, TrUserData);
+		skip_64_S2C_Login(Rest, 0, 0, F@_1, F@_2, F@_3,
+				  TrUserData);
 	    2 ->
 		skip_length_delimited_S2C_Login(Rest, 0, 0, F@_1, F@_2,
-						F@_3, F@_4, F@_5, TrUserData);
+						F@_3, TrUserData);
 	    3 ->
 		skip_group_S2C_Login(Rest, Key bsr 3, 0, F@_1, F@_2,
-				     F@_3, F@_4, F@_5, TrUserData);
+				     F@_3, TrUserData);
 	    5 ->
-		skip_32_S2C_Login(Rest, 0, 0, F@_1, F@_2, F@_3, F@_4,
-				  F@_5, TrUserData)
+		skip_32_S2C_Login(Rest, 0, 0, F@_1, F@_2, F@_3,
+				  TrUserData)
 	  end
     end;
 dg_read_field_def_S2C_Login(<<>>, 0, 0, F@_1, F@_2,
-			    F@_3, R1, F@_5, TrUserData) ->
-    #'S2C_Login'{id = F@_1, nickname = F@_2, money = F@_3,
-		 rooms = lists_reverse(R1, TrUserData),
-		 notFinishedRoom = F@_5}.
+			    F@_3, _) ->
+    #'S2C_Login'{id = F@_1, nickname = F@_2, money = F@_3}.
 
 d_field_S2C_Login_id(<<1:1, X:7, Rest/binary>>, N, Acc,
-		     F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData)
+		     F@_1, F@_2, F@_3, TrUserData)
     when N < 57 ->
     d_field_S2C_Login_id(Rest, N + 7, X bsl N + Acc, F@_1,
-			 F@_2, F@_3, F@_4, F@_5, TrUserData);
+			 F@_2, F@_3, TrUserData);
 d_field_S2C_Login_id(<<0:1, X:7, Rest/binary>>, N, Acc,
-		     _, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
+		     _, F@_2, F@_3, TrUserData) ->
     {NewFValue, RestF} = begin
 			   Len = X bsl N + Acc,
 			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
@@ -7673,15 +6691,15 @@ d_field_S2C_Login_id(<<0:1, X:7, Rest/binary>>, N, Acc,
 			    Rest2}
 			 end,
     dfp_read_field_def_S2C_Login(RestF, 0, 0, NewFValue,
-				 F@_2, F@_3, F@_4, F@_5, TrUserData).
+				 F@_2, F@_3, TrUserData).
 
 d_field_S2C_Login_nickname(<<1:1, X:7, Rest/binary>>, N,
-			   Acc, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData)
+			   Acc, F@_1, F@_2, F@_3, TrUserData)
     when N < 57 ->
     d_field_S2C_Login_nickname(Rest, N + 7, X bsl N + Acc,
-			       F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData);
+			       F@_1, F@_2, F@_3, TrUserData);
 d_field_S2C_Login_nickname(<<0:1, X:7, Rest/binary>>, N,
-			   Acc, F@_1, _, F@_3, F@_4, F@_5, TrUserData) ->
+			   Acc, F@_1, _, F@_3, TrUserData) ->
     {NewFValue, RestF} = begin
 			   Len = X bsl N + Acc,
 			   <<Utf8:Len/binary, Rest2/binary>> = Rest,
@@ -7690,108 +6708,59 @@ d_field_S2C_Login_nickname(<<0:1, X:7, Rest/binary>>, N,
 			    Rest2}
 			 end,
     dfp_read_field_def_S2C_Login(RestF, 0, 0, F@_1,
-				 NewFValue, F@_3, F@_4, F@_5, TrUserData).
+				 NewFValue, F@_3, TrUserData).
 
 d_field_S2C_Login_money(<<1:1, X:7, Rest/binary>>, N,
-			Acc, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData)
+			Acc, F@_1, F@_2, F@_3, TrUserData)
     when N < 57 ->
     d_field_S2C_Login_money(Rest, N + 7, X bsl N + Acc,
-			    F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData);
+			    F@_1, F@_2, F@_3, TrUserData);
 d_field_S2C_Login_money(<<0:1, X:7, Rest/binary>>, N,
-			Acc, F@_1, F@_2, _, F@_4, F@_5, TrUserData) ->
+			Acc, F@_1, F@_2, _, TrUserData) ->
     {NewFValue, RestF} = {id(X bsl N + Acc, TrUserData),
 			  Rest},
     dfp_read_field_def_S2C_Login(RestF, 0, 0, F@_1, F@_2,
-				 NewFValue, F@_4, F@_5, TrUserData).
-
-d_field_S2C_Login_rooms(<<1:1, X:7, Rest/binary>>, N,
-			Acc, F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData)
-    when N < 57 ->
-    d_field_S2C_Login_rooms(Rest, N + 7, X bsl N + Acc,
-			    F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData);
-d_field_S2C_Login_rooms(<<0:1, X:7, Rest/binary>>, N,
-			Acc, F@_1, F@_2, F@_3, Prev, F@_5, TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Bs:Len/binary, Rest2/binary>> = Rest,
-			   {id(decode_msg_Struct_RoomBrief(Bs, TrUserData),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_S2C_Login(RestF, 0, 0, F@_1, F@_2,
-				 F@_3, cons(NewFValue, Prev, TrUserData), F@_5,
-				 TrUserData).
-
-d_field_S2C_Login_notFinishedRoom(<<1:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				  TrUserData)
-    when N < 57 ->
-    d_field_S2C_Login_notFinishedRoom(Rest, N + 7,
-				      X bsl N + Acc, F@_1, F@_2, F@_3, F@_4,
-				      F@_5, TrUserData);
-d_field_S2C_Login_notFinishedRoom(<<0:1, X:7,
-				    Rest/binary>>,
-				  N, Acc, F@_1, F@_2, F@_3, F@_4, Prev,
-				  TrUserData) ->
-    {NewFValue, RestF} = begin
-			   Len = X bsl N + Acc,
-			   <<Bs:Len/binary, Rest2/binary>> = Rest,
-			   {id(decode_msg_Struct_RoomBrief(Bs, TrUserData),
-			       TrUserData),
-			    Rest2}
-			 end,
-    dfp_read_field_def_S2C_Login(RestF, 0, 0, F@_1, F@_2,
-				 F@_3, F@_4,
-				 if Prev == undefined -> NewFValue;
-				    true ->
-					merge_msg_Struct_RoomBrief(Prev,
-								   NewFValue,
-								   TrUserData)
-				 end,
-				 TrUserData).
+				 NewFValue, TrUserData).
 
 skip_varint_S2C_Login(<<1:1, _:7, Rest/binary>>, Z1, Z2,
-		      F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
+		      F@_1, F@_2, F@_3, TrUserData) ->
     skip_varint_S2C_Login(Rest, Z1, Z2, F@_1, F@_2, F@_3,
-			  F@_4, F@_5, TrUserData);
+			  TrUserData);
 skip_varint_S2C_Login(<<0:1, _:7, Rest/binary>>, Z1, Z2,
-		      F@_1, F@_2, F@_3, F@_4, F@_5, TrUserData) ->
+		      F@_1, F@_2, F@_3, TrUserData) ->
     dfp_read_field_def_S2C_Login(Rest, Z1, Z2, F@_1, F@_2,
-				 F@_3, F@_4, F@_5, TrUserData).
+				 F@_3, TrUserData).
 
 skip_length_delimited_S2C_Login(<<1:1, X:7,
 				  Rest/binary>>,
-				N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				TrUserData)
+				N, Acc, F@_1, F@_2, F@_3, TrUserData)
     when N < 57 ->
     skip_length_delimited_S2C_Login(Rest, N + 7,
-				    X bsl N + Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
+				    X bsl N + Acc, F@_1, F@_2, F@_3,
 				    TrUserData);
 skip_length_delimited_S2C_Login(<<0:1, X:7,
 				  Rest/binary>>,
-				N, Acc, F@_1, F@_2, F@_3, F@_4, F@_5,
-				TrUserData) ->
+				N, Acc, F@_1, F@_2, F@_3, TrUserData) ->
     Length = X bsl N + Acc,
     <<_:Length/binary, Rest2/binary>> = Rest,
     dfp_read_field_def_S2C_Login(Rest2, 0, 0, F@_1, F@_2,
-				 F@_3, F@_4, F@_5, TrUserData).
+				 F@_3, TrUserData).
 
 skip_group_S2C_Login(Bin, FNum, Z2, F@_1, F@_2, F@_3,
-		     F@_4, F@_5, TrUserData) ->
+		     TrUserData) ->
     {_, Rest} = read_group(Bin, FNum),
     dfp_read_field_def_S2C_Login(Rest, 0, Z2, F@_1, F@_2,
-				 F@_3, F@_4, F@_5, TrUserData).
+				 F@_3, TrUserData).
 
 skip_32_S2C_Login(<<_:32, Rest/binary>>, Z1, Z2, F@_1,
-		  F@_2, F@_3, F@_4, F@_5, TrUserData) ->
+		  F@_2, F@_3, TrUserData) ->
     dfp_read_field_def_S2C_Login(Rest, Z1, Z2, F@_1, F@_2,
-				 F@_3, F@_4, F@_5, TrUserData).
+				 F@_3, TrUserData).
 
 skip_64_S2C_Login(<<_:64, Rest/binary>>, Z1, Z2, F@_1,
-		  F@_2, F@_3, F@_4, F@_5, TrUserData) ->
+		  F@_2, F@_3, TrUserData) ->
     dfp_read_field_def_S2C_Login(Rest, Z1, Z2, F@_1, F@_2,
-				 F@_3, F@_4, F@_5, TrUserData).
+				 F@_3, TrUserData).
 
 decode_msg_S2C_Err(Bin, TrUserData) ->
     dfp_read_field_def_S2C_Err(Bin, 0, 0,
@@ -7949,6 +6918,109 @@ skip_64_S2C_Err(<<_:64, Rest/binary>>, Z1, Z2, F@_1,
 		F@_2, F@_3, TrUserData) ->
     dfp_read_field_def_S2C_Err(Rest, Z1, Z2, F@_1, F@_2,
 			       F@_3, TrUserData).
+
+decode_msg_S2C_PlayerInfo(Bin, TrUserData) ->
+    dfp_read_field_def_S2C_PlayerInfo(Bin, 0, 0,
+				      id(undefined, TrUserData), TrUserData).
+
+dfp_read_field_def_S2C_PlayerInfo(<<16, Rest/binary>>,
+				  Z1, Z2, F@_1, TrUserData) ->
+    d_field_S2C_PlayerInfo_moneyLeft(Rest, Z1, Z2, F@_1,
+				     TrUserData);
+dfp_read_field_def_S2C_PlayerInfo(<<>>, 0, 0, F@_1,
+				  _) ->
+    #'S2C_PlayerInfo'{moneyLeft = F@_1};
+dfp_read_field_def_S2C_PlayerInfo(Other, Z1, Z2, F@_1,
+				  TrUserData) ->
+    dg_read_field_def_S2C_PlayerInfo(Other, Z1, Z2, F@_1,
+				     TrUserData).
+
+dg_read_field_def_S2C_PlayerInfo(<<1:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F@_1, TrUserData)
+    when N < 32 - 7 ->
+    dg_read_field_def_S2C_PlayerInfo(Rest, N + 7,
+				     X bsl N + Acc, F@_1, TrUserData);
+dg_read_field_def_S2C_PlayerInfo(<<0:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F@_1, TrUserData) ->
+    Key = X bsl N + Acc,
+    case Key of
+      16 ->
+	  d_field_S2C_PlayerInfo_moneyLeft(Rest, 0, 0, F@_1,
+					   TrUserData);
+      _ ->
+	  case Key band 7 of
+	    0 ->
+		skip_varint_S2C_PlayerInfo(Rest, 0, 0, F@_1,
+					   TrUserData);
+	    1 ->
+		skip_64_S2C_PlayerInfo(Rest, 0, 0, F@_1, TrUserData);
+	    2 ->
+		skip_length_delimited_S2C_PlayerInfo(Rest, 0, 0, F@_1,
+						     TrUserData);
+	    3 ->
+		skip_group_S2C_PlayerInfo(Rest, Key bsr 3, 0, F@_1,
+					  TrUserData);
+	    5 ->
+		skip_32_S2C_PlayerInfo(Rest, 0, 0, F@_1, TrUserData)
+	  end
+    end;
+dg_read_field_def_S2C_PlayerInfo(<<>>, 0, 0, F@_1, _) ->
+    #'S2C_PlayerInfo'{moneyLeft = F@_1}.
+
+d_field_S2C_PlayerInfo_moneyLeft(<<1:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, F@_1, TrUserData)
+    when N < 57 ->
+    d_field_S2C_PlayerInfo_moneyLeft(Rest, N + 7,
+				     X bsl N + Acc, F@_1, TrUserData);
+d_field_S2C_PlayerInfo_moneyLeft(<<0:1, X:7,
+				   Rest/binary>>,
+				 N, Acc, _, TrUserData) ->
+    {NewFValue, RestF} = {id(X bsl N + Acc, TrUserData),
+			  Rest},
+    dfp_read_field_def_S2C_PlayerInfo(RestF, 0, 0,
+				      NewFValue, TrUserData).
+
+skip_varint_S2C_PlayerInfo(<<1:1, _:7, Rest/binary>>,
+			   Z1, Z2, F@_1, TrUserData) ->
+    skip_varint_S2C_PlayerInfo(Rest, Z1, Z2, F@_1,
+			       TrUserData);
+skip_varint_S2C_PlayerInfo(<<0:1, _:7, Rest/binary>>,
+			   Z1, Z2, F@_1, TrUserData) ->
+    dfp_read_field_def_S2C_PlayerInfo(Rest, Z1, Z2, F@_1,
+				      TrUserData).
+
+skip_length_delimited_S2C_PlayerInfo(<<1:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F@_1, TrUserData)
+    when N < 57 ->
+    skip_length_delimited_S2C_PlayerInfo(Rest, N + 7,
+					 X bsl N + Acc, F@_1, TrUserData);
+skip_length_delimited_S2C_PlayerInfo(<<0:1, X:7,
+				       Rest/binary>>,
+				     N, Acc, F@_1, TrUserData) ->
+    Length = X bsl N + Acc,
+    <<_:Length/binary, Rest2/binary>> = Rest,
+    dfp_read_field_def_S2C_PlayerInfo(Rest2, 0, 0, F@_1,
+				      TrUserData).
+
+skip_group_S2C_PlayerInfo(Bin, FNum, Z2, F@_1,
+			  TrUserData) ->
+    {_, Rest} = read_group(Bin, FNum),
+    dfp_read_field_def_S2C_PlayerInfo(Rest, 0, Z2, F@_1,
+				      TrUserData).
+
+skip_32_S2C_PlayerInfo(<<_:32, Rest/binary>>, Z1, Z2,
+		       F@_1, TrUserData) ->
+    dfp_read_field_def_S2C_PlayerInfo(Rest, Z1, Z2, F@_1,
+				      TrUserData).
+
+skip_64_S2C_PlayerInfo(<<_:64, Rest/binary>>, Z1, Z2,
+		       F@_1, TrUserData) ->
+    dfp_read_field_def_S2C_PlayerInfo(Rest, Z1, Z2, F@_1,
+				      TrUserData).
 
 decode_msg_C2S_Heartbeat(Bin, TrUserData) ->
     dfp_read_field_def_C2S_Heartbeat(Bin, 0, 0, TrUserData).
@@ -8857,19 +7929,13 @@ merge_msgs(Prev, New, MsgName, Opts) ->
 	  merge_msg_Struct_MahjongHistory(Prev, New, TrUserData);
       'S2C_MahjongHistory' ->
 	  merge_msg_S2C_MahjongHistory(Prev, New, TrUserData);
-      'Struct_DeviceInfo' ->
-	  merge_msg_Struct_DeviceInfo(Prev, New, TrUserData);
-      'S2C_PlayerInfo1' ->
-	  merge_msg_S2C_PlayerInfo1(Prev, New, TrUserData);
-      'Struct_RoomBrief' ->
-	  merge_msg_Struct_RoomBrief(Prev, New, TrUserData);
-      'Struct_RoomPlayerBrief' ->
-	  merge_msg_Struct_RoomPlayerBrief(Prev, New, TrUserData);
       'C2S_Login' ->
 	  merge_msg_C2S_Login(Prev, New, TrUserData);
       'S2C_Login' ->
 	  merge_msg_S2C_Login(Prev, New, TrUserData);
       'S2C_Err' -> merge_msg_S2C_Err(Prev, New, TrUserData);
+      'S2C_PlayerInfo' ->
+	  merge_msg_S2C_PlayerInfo(Prev, New, TrUserData);
       'C2S_Heartbeat' ->
 	  merge_msg_C2S_Heartbeat(Prev, New, TrUserData);
       'S2C_Heartbeat' ->
@@ -9194,84 +8260,29 @@ merge_msg_S2C_MahjongHistory(#'S2C_MahjongHistory'{data
 				 NFdata == undefined -> PFdata
 			      end}.
 
--compile({nowarn_unused_function,merge_msg_Struct_DeviceInfo/3}).
-merge_msg_Struct_DeviceInfo(#'Struct_DeviceInfo'{},
-			    #'Struct_DeviceInfo'{os = NFos,
-						 deviceType = NFdeviceType,
-						 resolution = NFresolution,
-						 network = NFnetwork},
-			    _) ->
-    #'Struct_DeviceInfo'{os = NFos,
-			 deviceType = NFdeviceType, resolution = NFresolution,
-			 network = NFnetwork}.
-
--compile({nowarn_unused_function,merge_msg_S2C_PlayerInfo1/3}).
-merge_msg_S2C_PlayerInfo1(#'S2C_PlayerInfo1'{},
-			  #'S2C_PlayerInfo1'{moneyLeft = NFmoneyLeft}, _) ->
-    #'S2C_PlayerInfo1'{moneyLeft = NFmoneyLeft}.
-
--compile({nowarn_unused_function,merge_msg_Struct_RoomBrief/3}).
-merge_msg_Struct_RoomBrief(#'Struct_RoomBrief'{},
-			   #'Struct_RoomBrief'{roomId = NFroomId,
-					       gameId = NFgameId,
-					       playerCount = NFplayerCount,
-					       isLocked = NFisLocked,
-					       ownerId = NFownerId},
-			   _) ->
-    #'Struct_RoomBrief'{roomId = NFroomId,
-			gameId = NFgameId, playerCount = NFplayerCount,
-			isLocked = NFisLocked, ownerId = NFownerId}.
-
--compile({nowarn_unused_function,merge_msg_Struct_RoomPlayerBrief/3}).
-merge_msg_Struct_RoomPlayerBrief(#'Struct_RoomPlayerBrief'{},
-				 #'Struct_RoomPlayerBrief'{id = NFid,
-							   nickname =
-							       NFnickname,
-							   avatar = NFavatar},
-				 _) ->
-    #'Struct_RoomPlayerBrief'{id = NFid,
-			      nickname = NFnickname, avatar = NFavatar}.
-
 -compile({nowarn_unused_function,merge_msg_C2S_Login/3}).
-merge_msg_C2S_Login(#'C2S_Login'{device = PFdevice},
-		    #'C2S_Login'{token = NFtoken, version = NFversion,
-				 device = NFdevice},
-		    TrUserData) ->
-    #'C2S_Login'{token = NFtoken, version = NFversion,
-		 device =
-		     merge_msg_Struct_DeviceInfo(PFdevice, NFdevice,
-						 TrUserData)}.
+merge_msg_C2S_Login(#'C2S_Login'{},
+		    #'C2S_Login'{token = NFtoken}, _) ->
+    #'C2S_Login'{token = NFtoken}.
 
 -compile({nowarn_unused_function,merge_msg_S2C_Login/3}).
-merge_msg_S2C_Login(#'S2C_Login'{rooms = PFrooms,
-				 notFinishedRoom = PFnotFinishedRoom},
+merge_msg_S2C_Login(#'S2C_Login'{},
 		    #'S2C_Login'{id = NFid, nickname = NFnickname,
-				 money = NFmoney, rooms = NFrooms,
-				 notFinishedRoom = NFnotFinishedRoom},
-		    TrUserData) ->
+				 money = NFmoney},
+		    _) ->
     #'S2C_Login'{id = NFid, nickname = NFnickname,
-		 money = NFmoney,
-		 rooms =
-		     if PFrooms /= undefined, NFrooms /= undefined ->
-			    'erlang_++'(PFrooms, NFrooms, TrUserData);
-			PFrooms == undefined -> NFrooms;
-			NFrooms == undefined -> PFrooms
-		     end,
-		 notFinishedRoom =
-		     if PFnotFinishedRoom /= undefined,
-			NFnotFinishedRoom /= undefined ->
-			    merge_msg_Struct_RoomBrief(PFnotFinishedRoom,
-						       NFnotFinishedRoom,
-						       TrUserData);
-			PFnotFinishedRoom == undefined -> NFnotFinishedRoom;
-			NFnotFinishedRoom == undefined -> PFnotFinishedRoom
-		     end}.
+		 money = NFmoney}.
 
 -compile({nowarn_unused_function,merge_msg_S2C_Err/3}).
 merge_msg_S2C_Err(#'S2C_Err'{},
 		  #'S2C_Err'{code = NFcode, type = NFtype, msg = NFmsg},
 		  _) ->
     #'S2C_Err'{code = NFcode, type = NFtype, msg = NFmsg}.
+
+-compile({nowarn_unused_function,merge_msg_S2C_PlayerInfo/3}).
+merge_msg_S2C_PlayerInfo(#'S2C_PlayerInfo'{},
+			 #'S2C_PlayerInfo'{moneyLeft = NFmoneyLeft}, _) ->
+    #'S2C_PlayerInfo'{moneyLeft = NFmoneyLeft}.
 
 -compile({nowarn_unused_function,merge_msg_C2S_Heartbeat/3}).
 merge_msg_C2S_Heartbeat(_Prev, New, _TrUserData) -> New.
@@ -9440,20 +8451,13 @@ verify_msg(Msg, MsgName, Opts) ->
 	  v_msg_Struct_MahjongHistory(Msg, [MsgName], TrUserData);
       'S2C_MahjongHistory' ->
 	  v_msg_S2C_MahjongHistory(Msg, [MsgName], TrUserData);
-      'Struct_DeviceInfo' ->
-	  v_msg_Struct_DeviceInfo(Msg, [MsgName], TrUserData);
-      'S2C_PlayerInfo1' ->
-	  v_msg_S2C_PlayerInfo1(Msg, [MsgName], TrUserData);
-      'Struct_RoomBrief' ->
-	  v_msg_Struct_RoomBrief(Msg, [MsgName], TrUserData);
-      'Struct_RoomPlayerBrief' ->
-	  v_msg_Struct_RoomPlayerBrief(Msg, [MsgName],
-				       TrUserData);
       'C2S_Login' ->
 	  v_msg_C2S_Login(Msg, [MsgName], TrUserData);
       'S2C_Login' ->
 	  v_msg_S2C_Login(Msg, [MsgName], TrUserData);
       'S2C_Err' -> v_msg_S2C_Err(Msg, [MsgName], TrUserData);
+      'S2C_PlayerInfo' ->
+	  v_msg_S2C_PlayerInfo(Msg, [MsgName], TrUserData);
       'C2S_Heartbeat' ->
 	  v_msg_C2S_Heartbeat(Msg, [MsgName], TrUserData);
       'S2C_Heartbeat' ->
@@ -9972,98 +8976,22 @@ v_msg_S2C_MahjongHistory(X, Path, _TrUserData) ->
     mk_type_error({expected_msg, 'S2C_MahjongHistory'}, X,
 		  Path).
 
--compile({nowarn_unused_function,v_msg_Struct_DeviceInfo/3}).
--dialyzer({nowarn_function,v_msg_Struct_DeviceInfo/3}).
-v_msg_Struct_DeviceInfo(#'Struct_DeviceInfo'{os = F1,
-					     deviceType = F2, resolution = F3,
-					     network = F4},
-			Path, TrUserData) ->
-    v_type_string(F1, [os | Path], TrUserData),
-    v_type_string(F2, [deviceType | Path], TrUserData),
-    v_type_string(F3, [resolution | Path], TrUserData),
-    v_type_string(F4, [network | Path], TrUserData),
-    ok;
-v_msg_Struct_DeviceInfo(X, Path, _TrUserData) ->
-    mk_type_error({expected_msg, 'Struct_DeviceInfo'}, X,
-		  Path).
-
--compile({nowarn_unused_function,v_msg_S2C_PlayerInfo1/3}).
--dialyzer({nowarn_function,v_msg_S2C_PlayerInfo1/3}).
-v_msg_S2C_PlayerInfo1(#'S2C_PlayerInfo1'{moneyLeft =
-					     F1},
-		      Path, TrUserData) ->
-    v_type_uint64(F1, [moneyLeft | Path], TrUserData), ok;
-v_msg_S2C_PlayerInfo1(X, Path, _TrUserData) ->
-    mk_type_error({expected_msg, 'S2C_PlayerInfo1'}, X,
-		  Path).
-
--compile({nowarn_unused_function,v_msg_Struct_RoomBrief/3}).
--dialyzer({nowarn_function,v_msg_Struct_RoomBrief/3}).
-v_msg_Struct_RoomBrief(#'Struct_RoomBrief'{roomId = F1,
-					   gameId = F2, playerCount = F3,
-					   isLocked = F4, ownerId = F5},
-		       Path, TrUserData) ->
-    v_type_uint32(F1, [roomId | Path], TrUserData),
-    v_type_uint32(F2, [gameId | Path], TrUserData),
-    v_type_uint32(F3, [playerCount | Path], TrUserData),
-    v_type_bool(F4, [isLocked | Path], TrUserData),
-    v_type_string(F5, [ownerId | Path], TrUserData),
-    ok;
-v_msg_Struct_RoomBrief(X, Path, _TrUserData) ->
-    mk_type_error({expected_msg, 'Struct_RoomBrief'}, X,
-		  Path).
-
--compile({nowarn_unused_function,v_msg_Struct_RoomPlayerBrief/3}).
--dialyzer({nowarn_function,v_msg_Struct_RoomPlayerBrief/3}).
-v_msg_Struct_RoomPlayerBrief(#'Struct_RoomPlayerBrief'{id
-							   = F1,
-						       nickname = F2,
-						       avatar = F3},
-			     Path, TrUserData) ->
-    v_type_string(F1, [id | Path], TrUserData),
-    v_type_string(F2, [nickname | Path], TrUserData),
-    v_type_string(F3, [avatar | Path], TrUserData),
-    ok;
-v_msg_Struct_RoomPlayerBrief(X, Path, _TrUserData) ->
-    mk_type_error({expected_msg, 'Struct_RoomPlayerBrief'},
-		  X, Path).
-
 -compile({nowarn_unused_function,v_msg_C2S_Login/3}).
 -dialyzer({nowarn_function,v_msg_C2S_Login/3}).
-v_msg_C2S_Login(#'C2S_Login'{token = F1, version = F2,
-			     device = F3},
-		Path, TrUserData) ->
-    v_type_string(F1, [token | Path], TrUserData),
-    v_type_uint32(F2, [version | Path], TrUserData),
-    v_msg_Struct_DeviceInfo(F3, [device | Path],
-			    TrUserData),
-    ok;
+v_msg_C2S_Login(#'C2S_Login'{token = F1}, Path,
+		TrUserData) ->
+    v_type_string(F1, [token | Path], TrUserData), ok;
 v_msg_C2S_Login(X, Path, _TrUserData) ->
     mk_type_error({expected_msg, 'C2S_Login'}, X, Path).
 
 -compile({nowarn_unused_function,v_msg_S2C_Login/3}).
 -dialyzer({nowarn_function,v_msg_S2C_Login/3}).
 v_msg_S2C_Login(#'S2C_Login'{id = F1, nickname = F2,
-			     money = F3, rooms = F4, notFinishedRoom = F5},
+			     money = F3},
 		Path, TrUserData) ->
     v_type_string(F1, [id | Path], TrUserData),
     v_type_string(F2, [nickname | Path], TrUserData),
     v_type_uint64(F3, [money | Path], TrUserData),
-    if is_list(F4) ->
-	   _ = [v_msg_Struct_RoomBrief(Elem, [rooms | Path],
-				       TrUserData)
-		|| Elem <- F4],
-	   ok;
-       true ->
-	   mk_type_error({invalid_list_of,
-			  {msg, 'Struct_RoomBrief'}},
-			 F4, [rooms | Path])
-    end,
-    if F5 == undefined -> ok;
-       true ->
-	   v_msg_Struct_RoomBrief(F5, [notFinishedRoom | Path],
-				  TrUserData)
-    end,
     ok;
 v_msg_S2C_Login(X, Path, _TrUserData) ->
     mk_type_error({expected_msg, 'S2C_Login'}, X, Path).
@@ -10080,6 +9008,15 @@ v_msg_S2C_Err(#'S2C_Err'{code = F1, type = F2,
     ok;
 v_msg_S2C_Err(X, Path, _TrUserData) ->
     mk_type_error({expected_msg, 'S2C_Err'}, X, Path).
+
+-compile({nowarn_unused_function,v_msg_S2C_PlayerInfo/3}).
+-dialyzer({nowarn_function,v_msg_S2C_PlayerInfo/3}).
+v_msg_S2C_PlayerInfo(#'S2C_PlayerInfo'{moneyLeft = F1},
+		     Path, TrUserData) ->
+    v_type_uint64(F1, [moneyLeft | Path], TrUserData), ok;
+v_msg_S2C_PlayerInfo(X, Path, _TrUserData) ->
+    mk_type_error({expected_msg, 'S2C_PlayerInfo'}, X,
+		  Path).
 
 -compile({nowarn_unused_function,v_msg_C2S_Heartbeat/3}).
 -dialyzer({nowarn_function,v_msg_C2S_Heartbeat/3}).
@@ -10257,15 +9194,6 @@ v_type_uint64(N, Path, _TrUserData)
 v_type_uint64(X, Path, _TrUserData) ->
     mk_type_error({bad_integer, uint64, unsigned, 64}, X,
 		  Path).
-
--compile({nowarn_unused_function,v_type_bool/3}).
--dialyzer({nowarn_function,v_type_bool/3}).
-v_type_bool(false, _Path, _TrUserData) -> ok;
-v_type_bool(true, _Path, _TrUserData) -> ok;
-v_type_bool(0, _Path, _TrUserData) -> ok;
-v_type_bool(1, _Path, _TrUserData) -> ok;
-v_type_bool(X, Path, _TrUserData) ->
-    mk_type_error(bad_boolean_value, X, Path).
 
 -compile({nowarn_unused_function,v_type_string/3}).
 -dialyzer({nowarn_function,v_type_string/3}).
@@ -10495,43 +9423,8 @@ get_msg_defs() ->
       [#field{name = data, fnum = 1, rnum = 2,
 	      type = {msg, 'Struct_MahjongHistory'},
 	      occurrence = repeated, opts = []}]},
-     {{msg, 'Struct_DeviceInfo'},
-      [#field{name = os, fnum = 1, rnum = 2, type = string,
-	      occurrence = required, opts = []},
-       #field{name = deviceType, fnum = 2, rnum = 3,
-	      type = string, occurrence = required, opts = []},
-       #field{name = resolution, fnum = 3, rnum = 4,
-	      type = string, occurrence = required, opts = []},
-       #field{name = network, fnum = 4, rnum = 5,
-	      type = string, occurrence = required, opts = []}]},
-     {{msg, 'S2C_PlayerInfo1'},
-      [#field{name = moneyLeft, fnum = 2, rnum = 2,
-	      type = uint64, occurrence = required, opts = []}]},
-     {{msg, 'Struct_RoomBrief'},
-      [#field{name = roomId, fnum = 1, rnum = 2,
-	      type = uint32, occurrence = required, opts = []},
-       #field{name = gameId, fnum = 2, rnum = 3, type = uint32,
-	      occurrence = required, opts = []},
-       #field{name = playerCount, fnum = 3, rnum = 4,
-	      type = uint32, occurrence = required, opts = []},
-       #field{name = isLocked, fnum = 4, rnum = 5, type = bool,
-	      occurrence = required, opts = []},
-       #field{name = ownerId, fnum = 5, rnum = 6,
-	      type = string, occurrence = required, opts = []}]},
-     {{msg, 'Struct_RoomPlayerBrief'},
-      [#field{name = id, fnum = 1, rnum = 2, type = string,
-	      occurrence = required, opts = []},
-       #field{name = nickname, fnum = 3, rnum = 3,
-	      type = string, occurrence = required, opts = []},
-       #field{name = avatar, fnum = 4, rnum = 4, type = string,
-	      occurrence = required, opts = []}]},
      {{msg, 'C2S_Login'},
-      [#field{name = token, fnum = 2, rnum = 2, type = string,
-	      occurrence = required, opts = []},
-       #field{name = version, fnum = 3, rnum = 3,
-	      type = uint32, occurrence = required, opts = []},
-       #field{name = device, fnum = 4, rnum = 4,
-	      type = {msg, 'Struct_DeviceInfo'},
+      [#field{name = token, fnum = 1, rnum = 2, type = string,
 	      occurrence = required, opts = []}]},
      {{msg, 'S2C_Login'},
       [#field{name = id, fnum = 1, rnum = 2, type = string,
@@ -10539,13 +9432,7 @@ get_msg_defs() ->
        #field{name = nickname, fnum = 3, rnum = 3,
 	      type = string, occurrence = required, opts = []},
        #field{name = money, fnum = 4, rnum = 4, type = uint64,
-	      occurrence = required, opts = []},
-       #field{name = rooms, fnum = 10, rnum = 5,
-	      type = {msg, 'Struct_RoomBrief'}, occurrence = repeated,
-	      opts = []},
-       #field{name = notFinishedRoom, fnum = 11, rnum = 6,
-	      type = {msg, 'Struct_RoomBrief'}, occurrence = optional,
-	      opts = []}]},
+	      occurrence = required, opts = []}]},
      {{msg, 'S2C_Err'},
       [#field{name = code, fnum = 1, rnum = 2,
 	      type = {enum, 'EnumS2CErrCode'}, occurrence = required,
@@ -10555,6 +9442,9 @@ get_msg_defs() ->
 	      occurrence = required, opts = []},
        #field{name = msg, fnum = 3, rnum = 4, type = string,
 	      occurrence = required, opts = []}]},
+     {{msg, 'S2C_PlayerInfo'},
+      [#field{name = moneyLeft, fnum = 2, rnum = 2,
+	      type = uint64, occurrence = required, opts = []}]},
      {{msg, 'C2S_Heartbeat'}, []},
      {{msg, 'S2C_Heartbeat'}, []},
      {{msg, 'C2S_Gm'},
@@ -10608,10 +9498,8 @@ get_msg_names() ->
      'S2C_MahjongNoHu', 'S2C_MahjongHaveNoNextGame',
      'S2C_MahjongFinish', 'C2S_MahjongHistory',
      'Struct_MahjongHistory', 'S2C_MahjongHistory',
-     'Struct_DeviceInfo', 'S2C_PlayerInfo1',
-     'Struct_RoomBrief', 'Struct_RoomPlayerBrief',
-     'C2S_Login', 'S2C_Login', 'S2C_Err', 'C2S_Heartbeat',
-     'S2C_Heartbeat', 'C2S_Gm', 'S2C_Gm'].
+     'C2S_Login', 'S2C_Login', 'S2C_Err', 'S2C_PlayerInfo',
+     'C2S_Heartbeat', 'S2C_Heartbeat', 'C2S_Gm', 'S2C_Gm'].
 
 
 get_group_names() -> [].
@@ -10638,10 +9526,8 @@ get_msg_or_group_names() ->
      'S2C_MahjongNoHu', 'S2C_MahjongHaveNoNextGame',
      'S2C_MahjongFinish', 'C2S_MahjongHistory',
      'Struct_MahjongHistory', 'S2C_MahjongHistory',
-     'Struct_DeviceInfo', 'S2C_PlayerInfo1',
-     'Struct_RoomBrief', 'Struct_RoomPlayerBrief',
-     'C2S_Login', 'S2C_Login', 'S2C_Err', 'C2S_Heartbeat',
-     'S2C_Heartbeat', 'C2S_Gm', 'S2C_Gm'].
+     'C2S_Login', 'S2C_Login', 'S2C_Err', 'S2C_PlayerInfo',
+     'C2S_Heartbeat', 'S2C_Heartbeat', 'C2S_Gm', 'S2C_Gm'].
 
 
 get_enum_names() ->
@@ -10818,43 +9704,8 @@ find_msg_def('S2C_MahjongHistory') ->
     [#field{name = data, fnum = 1, rnum = 2,
 	    type = {msg, 'Struct_MahjongHistory'},
 	    occurrence = repeated, opts = []}];
-find_msg_def('Struct_DeviceInfo') ->
-    [#field{name = os, fnum = 1, rnum = 2, type = string,
-	    occurrence = required, opts = []},
-     #field{name = deviceType, fnum = 2, rnum = 3,
-	    type = string, occurrence = required, opts = []},
-     #field{name = resolution, fnum = 3, rnum = 4,
-	    type = string, occurrence = required, opts = []},
-     #field{name = network, fnum = 4, rnum = 5,
-	    type = string, occurrence = required, opts = []}];
-find_msg_def('S2C_PlayerInfo1') ->
-    [#field{name = moneyLeft, fnum = 2, rnum = 2,
-	    type = uint64, occurrence = required, opts = []}];
-find_msg_def('Struct_RoomBrief') ->
-    [#field{name = roomId, fnum = 1, rnum = 2,
-	    type = uint32, occurrence = required, opts = []},
-     #field{name = gameId, fnum = 2, rnum = 3, type = uint32,
-	    occurrence = required, opts = []},
-     #field{name = playerCount, fnum = 3, rnum = 4,
-	    type = uint32, occurrence = required, opts = []},
-     #field{name = isLocked, fnum = 4, rnum = 5, type = bool,
-	    occurrence = required, opts = []},
-     #field{name = ownerId, fnum = 5, rnum = 6,
-	    type = string, occurrence = required, opts = []}];
-find_msg_def('Struct_RoomPlayerBrief') ->
-    [#field{name = id, fnum = 1, rnum = 2, type = string,
-	    occurrence = required, opts = []},
-     #field{name = nickname, fnum = 3, rnum = 3,
-	    type = string, occurrence = required, opts = []},
-     #field{name = avatar, fnum = 4, rnum = 4, type = string,
-	    occurrence = required, opts = []}];
 find_msg_def('C2S_Login') ->
-    [#field{name = token, fnum = 2, rnum = 2, type = string,
-	    occurrence = required, opts = []},
-     #field{name = version, fnum = 3, rnum = 3,
-	    type = uint32, occurrence = required, opts = []},
-     #field{name = device, fnum = 4, rnum = 4,
-	    type = {msg, 'Struct_DeviceInfo'},
+    [#field{name = token, fnum = 1, rnum = 2, type = string,
 	    occurrence = required, opts = []}];
 find_msg_def('S2C_Login') ->
     [#field{name = id, fnum = 1, rnum = 2, type = string,
@@ -10862,13 +9713,7 @@ find_msg_def('S2C_Login') ->
      #field{name = nickname, fnum = 3, rnum = 3,
 	    type = string, occurrence = required, opts = []},
      #field{name = money, fnum = 4, rnum = 4, type = uint64,
-	    occurrence = required, opts = []},
-     #field{name = rooms, fnum = 10, rnum = 5,
-	    type = {msg, 'Struct_RoomBrief'}, occurrence = repeated,
-	    opts = []},
-     #field{name = notFinishedRoom, fnum = 11, rnum = 6,
-	    type = {msg, 'Struct_RoomBrief'}, occurrence = optional,
-	    opts = []}];
+	    occurrence = required, opts = []}];
 find_msg_def('S2C_Err') ->
     [#field{name = code, fnum = 1, rnum = 2,
 	    type = {enum, 'EnumS2CErrCode'}, occurrence = required,
@@ -10878,6 +9723,9 @@ find_msg_def('S2C_Err') ->
 	    occurrence = required, opts = []},
      #field{name = msg, fnum = 3, rnum = 4, type = string,
 	    occurrence = required, opts = []}];
+find_msg_def('S2C_PlayerInfo') ->
+    [#field{name = moneyLeft, fnum = 2, rnum = 2,
+	    type = uint64, occurrence = required, opts = []}];
 find_msg_def('C2S_Heartbeat') -> [];
 find_msg_def('S2C_Heartbeat') -> [];
 find_msg_def('C2S_Gm') ->

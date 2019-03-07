@@ -7,49 +7,10 @@
 
 -define(pt_common_gpb_version, "4.4.0").
 
--ifndef('STRUCT_DEVICEINFO_PB_H').
--define('STRUCT_DEVICEINFO_PB_H', true).
--record('Struct_DeviceInfo',
-        {os                     :: iolist(),        % = 1
-         deviceType             :: iolist(),        % = 2
-         resolution             :: iolist(),        % = 3
-         network                :: iolist()         % = 4
-        }).
--endif.
-
--ifndef('S2C_PLAYERINFO1_PB_H').
--define('S2C_PLAYERINFO1_PB_H', true).
--record('S2C_PlayerInfo1',
-        {moneyLeft              :: non_neg_integer() % = 2, 32 bits
-        }).
--endif.
-
--ifndef('STRUCT_ROOMBRIEF_PB_H').
--define('STRUCT_ROOMBRIEF_PB_H', true).
--record('Struct_RoomBrief',
-        {roomId                 :: non_neg_integer(), % = 1, 32 bits
-         gameId                 :: non_neg_integer(), % = 2, 32 bits
-         playerCount            :: non_neg_integer(), % = 3, 32 bits
-         isLocked               :: boolean() | 0 | 1, % = 4
-         ownerId                :: iolist()         % = 5
-        }).
--endif.
-
--ifndef('STRUCT_ROOMPLAYERBRIEF_PB_H').
--define('STRUCT_ROOMPLAYERBRIEF_PB_H', true).
--record('Struct_RoomPlayerBrief',
-        {id                     :: iolist(),        % = 1
-         nickname               :: iolist(),        % = 3
-         avatar                 :: iolist()         % = 4
-        }).
--endif.
-
 -ifndef('C2S_LOGIN_PB_H').
 -define('C2S_LOGIN_PB_H', true).
 -record('C2S_Login',
-        {token                  :: iolist(),        % = 2
-         version                :: non_neg_integer(), % = 3, 32 bits
-         device                 :: pt_common:'Struct_DeviceInfo'() % = 4
+        {token                  :: iolist()         % = 1
         }).
 -endif.
 
@@ -58,9 +19,7 @@
 -record('S2C_Login',
         {id                     :: iolist(),        % = 1
          nickname               :: iolist(),        % = 3
-         money                  :: non_neg_integer(), % = 4, 32 bits
-         rooms = []             :: [pt_common:'Struct_RoomBrief'()] | undefined, % = 10
-         notFinishedRoom        :: pt_common:'Struct_RoomBrief'() | undefined % = 11
+         money                  :: non_neg_integer() % = 4, 32 bits
         }).
 -endif.
 
@@ -70,6 +29,13 @@
         {code                   :: 'E_S2CErrCode_Succ' | 'E_S2CErrCode_Sys' | 'E_S2CErrCode_Busy' | 'E_S2CErrCode_OpToFrequency' | 'E_S2CErrCode_ReLogin' | 'E_S2CErrCode_NotLogin' | 'E_S2CErrCode_LoginCheckTimeout' | 'E_S2CErrCode_LoginCheckNotThrough' | 'E_S2CErrCode_ErrArgs' | 'E_S2CErrCode_ProtoErr' | 'E_S2CErrCode_LoginTokenInvalid' | 'E_S2CErrCode_BeKicked' | 'E_S2CErrCode_NotEnoughMoney' | integer(), % = 1, enum EnumS2CErrCode
          type                   :: 'E_S2CTipsShowType_PopUp' | 'E_S2CTipsShowType_Marquee' | integer(), % = 2, enum EnumS2CTipsShowType
          msg                    :: iolist()         % = 3
+        }).
+-endif.
+
+-ifndef('S2C_PLAYERINFO_PB_H').
+-define('S2C_PLAYERINFO_PB_H', true).
+-record('S2C_PlayerInfo',
+        {moneyLeft              :: non_neg_integer() % = 2, 32 bits
         }).
 -endif.
 
